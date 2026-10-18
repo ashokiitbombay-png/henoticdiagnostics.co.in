@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { ArrowRight, ArrowLeftRight, ChevronRight } from 'lucide-react';
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Henotic Diagnostics',
     images: [{
-      url: 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp',
+      url: 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp',
       width: 1200,
       height: 630,
       alt: 'Compare Diagnostic Tests | Henotic Diagnostics',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Compare Diagnostic Tests | Henotic Diagnostics',
     description: 'Expert-reviewed comparisons of popular diagnostic tests.',
-    images: ['https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp'],
+    images: ['https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp'],
   },
 };
 

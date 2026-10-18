@@ -1,8 +1,8 @@
-﻿import React from "react";
+import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
 import { ArrowRight, PenLine, Newspaper } from "lucide-react";
-import { getBlogPosts } from "@/lib/wordpress/getBlogPosts";
+import { getBlogPosts } from "@/lib/payload/posts";
 import BlogCard from "@/components/blog/BlogCard";
 
 export const metadata: Metadata = {
@@ -16,20 +16,20 @@ export const metadata: Metadata = {
       "Expert health articles, diagnostic guides, and medical insights from Henotic Diagnostics. Stay informed about your health.",
     url: "https://henoticdiagnostics.co.in/blog",
     type: "website",
-    images: [{ url: 'https://cdn.henoticdiagnostics.co.in/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp', width: 1200, height: 630, alt: 'Health Articles & Medical Insights | Henotic Diagnostics Blog' }],
+    images: [{ url: 'https://cdn.henoticdiagnostics.com/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp', width: 1200, height: 630, alt: 'Health Articles & Medical Insights | Henotic Diagnostics Blog' }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Health Articles & Medical Insights | Henotic Diagnostics Blog",
     description: "Expert health articles, diagnostic guides, and medical insights from Henotic Diagnostics.",
-    images: ['https://cdn.henoticdiagnostics.co.in/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp'],
+    images: ['https://cdn.henoticdiagnostics.com/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp'],
   },
 };
 
 export default async function BlogPage() {
   const postsData = await getBlogPosts(12);
   const posts = postsData?.nodes ?? [];
-  const hasWordPressPosts = posts.length > 0;
+  const hasPosts = posts.length > 0;
 
   return (
     <main className="min-h-screen font-sans mt-[80px]">
@@ -63,7 +63,7 @@ export default async function BlogPage() {
       {/* ═══════════════════════════════════════════════════════════════════ */}
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          {hasWordPressPosts ? (
+          {hasPosts ? (
             <>
               {/* Section Header */}
               <div className="flex items-center gap-3 mb-10">

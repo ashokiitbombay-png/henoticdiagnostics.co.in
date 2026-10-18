@@ -1,4 +1,4 @@
-﻿import { describe, it, expect } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { cn, optimizeWordPressHTML } from '../utils';
 
 describe('cn (className merge)', () => {
@@ -44,9 +44,9 @@ describe('optimizeWordPressHTML', () => {
   });
 
   it('normalizes GCS bucket URLs in image tags', () => {
-    const input = '<img src="https://cdn.henoticdiagnostics.co.in/MRI/test.webp" alt="MRI">';
+    const input = '<img src="https://cdn.henoticdiagnostics.com/MRI/test.webp" alt="MRI">';
     const result = optimizeWordPressHTML(input);
-    expect(result).toContain('https://cdn.henoticdiagnostics.co.in/MRI/test.webp');
+    expect(result).toContain('https://cdn.henoticdiagnostics.com/MRI/test.webp');
   });
 
   it('preserves existing width/height attributes', () => {

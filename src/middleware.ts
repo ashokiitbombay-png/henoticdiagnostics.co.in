@@ -3,13 +3,15 @@ import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
-  const host = request.headers.get('host');
+  const host = request.headers.get('host')?.split(':')[0]; // strip port if any
 
-  // 1. Canonical Domain & Legacy 301 Redirects
+  // 1. Canonical Domain & Legacy 301 Redirects:
+  // Redirect www.henoticdiagnostics.co.in, henoticdiagnostics.com, www.henoticdiagnostics.com
+  // to the canonical https://henoticdiagnostics.co.in
   if (
+    host === 'www.henoticdiagnostics.co.in' ||
     host === 'henoticdiagnostics.com' ||
-    host === 'www.henoticdiagnostics.com' ||
-    host === 'www.henoticdiagnostics.co.in'
+    host === 'www.henoticdiagnostics.com'
   ) {
     url.host = 'henoticdiagnostics.co.in';
     url.protocol = 'https:';

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { ArrowRight, Heart, Brain, Bone, Baby, Droplets, Activity, Eye, Stethoscope } from 'lucide-react';
@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description: 'Find the right diagnostic tests for your symptoms. Browse 80+ medical conditions with recommended NABL-accredited tests.',
     url: 'https://henoticdiagnostics.co.in/conditions',
     type: 'website',
-    images: [{ url: 'https://cdn.henoticdiagnostics.co.in/PATHOLOGY/Hero/henotic-diagnostics-pathology-lab-panvel.webp', width: 1200, height: 630, alt: 'Medical Conditions & Symptoms Guide | Henotic Diagnostics' }],
+    images: [{ url: 'https://cdn.henoticdiagnostics.com/PATHOLOGY/Hero/henotic-diagnostics-pathology-lab-panvel.webp', width: 1200, height: 630, alt: 'Medical Conditions & Symptoms Guide | Henotic Diagnostics' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Medical Conditions & Symptoms Guide | Henotic Diagnostics',
     description: 'Find the right diagnostic tests for your symptoms. 80+ conditions mapped to expert tests.',
-    images: ['https://cdn.henoticdiagnostics.co.in/PATHOLOGY/Hero/henotic-diagnostics-pathology-lab-panvel.webp'],
+    images: ['https://cdn.henoticdiagnostics.com/PATHOLOGY/Hero/henotic-diagnostics-pathology-lab-panvel.webp'],
   },
 };
 

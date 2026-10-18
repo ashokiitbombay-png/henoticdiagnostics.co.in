@@ -12,43 +12,18 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'cdn.henoticdiagnostics.co.in',
-      },
-      {
-        protocol: 'https',
-        hostname: 'cdn.henoticdiagnostics.com',
-      },
-      // Keep GCS listed temporarily during transition
-      {
-        protocol: 'https',
-        hostname: 'storage.googleapis.com',
-        pathname: '/wp-media-henoticbucket/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'cms.henoticdiagnostics.co.in',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'cms.henoticdiagnostics.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'secure.gravatar.com',
-        port: '',
-        pathname: '/**',
-      },
+      { protocol: 'https', hostname: 'cdn.henoticdiagnostics.co.in' },
+      { protocol: 'https', hostname: 'cdn.henoticdiagnostics.com' },
+      { protocol: 'https', hostname: 'www.henoticdiagnostics.co.in' },
+      { protocol: 'https', hostname: 'henoticdiagnostics.co.in' },
+      { protocol: 'http', hostname: 'localhost', port: '3001' },
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: 'lh3.googleusercontent.com' }
     ],
   },
   experimental: {
     webpackBuildWorker: true,
-    optimizePackageImports: ['lucide-react', '@apollo/client', 'framer-motion'],
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
   // Turbopack is the default bundler in Next.js 16+.
   // Empty config tells Next.js to use Turbopack defaults while keeping
@@ -71,7 +46,7 @@ const nextConfig = {
               enforce: true,
             },
             lib: {
-              test: /[\\/]node_modules[\\/](lucide-react|@apollo\/client|graphql)[\\/]/,
+              test: /[\\/]node_modules[\\/](lucide-react)[\\/]/,
               name: 'commons',
               priority: 30,
               minChunks: 1,
@@ -106,7 +81,7 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-          { key: 'Content-Security-Policy', value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://connect.facebook.net https://embed.tawk.to https://cdn.jsdelivr.net https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://apis.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob: https://cdn.henoticdiagnostics.co.in https://cdn.henoticdiagnostics.com https://storage.googleapis.com https://cms.henoticdiagnostics.co.in https://cms.henoticdiagnostics.com https://secure.gravatar.com https://www.facebook.com https://*.google.com https://*.gstatic.com https://*.googleapis.com; connect-src 'self' https://cdn.henoticdiagnostics.co.in https://cdn.henoticdiagnostics.com https://storage.googleapis.com https://cms.henoticdiagnostics.co.in https://cms.henoticdiagnostics.com https://api.razorpay.com https://*.sentry.io https://*.google-analytics.com https://*.clarity.ms https://www.googletagmanager.com; frame-src 'self' https://api.razorpay.com https://embed.tawk.to https://www.google.com https://maps.google.com https://*.google.com https://*.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" },
+          { key: 'Content-Security-Policy', value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://connect.facebook.net https://embed.tawk.to https://cdn.jsdelivr.net https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://apis.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob: https://cdn.henoticdiagnostics.co.in https://cdn.henoticdiagnostics.com https://storage.googleapis.com https://www.facebook.com https://*.google.com https://*.gstatic.com https://*.googleapis.com http://localhost:3001; connect-src 'self' https://cdn.henoticdiagnostics.co.in https://cdn.henoticdiagnostics.com https://storage.googleapis.com https://api.razorpay.com https://*.sentry.io https://*.google-analytics.com https://*.clarity.ms https://www.googletagmanager.com http://localhost:3001; frame-src 'self' https://api.razorpay.com https://embed.tawk.to https://www.google.com https://maps.google.com https://*.google.com https://*.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self), payment=(self), usb=()' }
         ],
       },

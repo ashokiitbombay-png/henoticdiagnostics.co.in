@@ -1,4 +1,4 @@
-﻿import { REGION_NAMES } from '@/config/locations';
+import { REGION_NAMES } from '@/config/locations';
 import { getPricingForService } from '@/config/pricing';
 import { getFAQsForService } from '@/config/faqs';
 import { getConditionById } from '@/config/conditions';
@@ -269,7 +269,7 @@ export function generateConditionSchema(conditionId: string) {
 
   const condHeroImage = condition.recommendedServices?.[0]
     ? getHeroImageForService(condition.recommendedServices[0])
-    : 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
+    : 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
 
   const medicalWebPageSchema = {
     '@context': 'https://schema.org',
@@ -317,7 +317,7 @@ export function generateDoctorSchema(doctorId: string) {
   if (!doctor) return null;
 
   const pageUrl = `${BASE_URL}/doctors/${doctorId}`;
-  const docHeroImage = doctor.imageUrl || 'https://cdn.henoticdiagnostics.co.in/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp';
+  const docHeroImage = doctor.imageUrl || 'https://cdn.henoticdiagnostics.com/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp';
 
   const physicianSchema = {
     '@context': 'https://schema.org',

@@ -83,11 +83,11 @@ export function optimizeWordPressHTML(htmlContent: string): string {
           return encodeURIComponent(seg);
         }
       }).join('/');
-      return "https://cdn.henoticdiagnostics.co.in/" + encodedPath;
+      return "https://cdn.henoticdiagnostics.com/" + encodedPath;
     }
     // Handle CDN URLs — normalize encoding
-    if (decoded.includes("cdn.henoticdiagnostics.co.in/")) {
-      const parts = decoded.split("cdn.henoticdiagnostics.co.in/");
+    if (decoded.includes("cdn.henoticdiagnostics.com/")) {
+      const parts = decoded.split("cdn.henoticdiagnostics.com/");
       const encodedPath = parts[1].split('/').map(seg => {
         try {
           return encodeURIComponent(decodeURIComponent(seg));
@@ -95,7 +95,7 @@ export function optimizeWordPressHTML(htmlContent: string): string {
           return encodeURIComponent(seg);
         }
       }).join('/');
-      return "https://cdn.henoticdiagnostics.co.in/" + encodedPath;
+      return "https://cdn.henoticdiagnostics.com/" + encodedPath;
     }
     if (decoded.includes("cdn.henoticdiagnostics.com/")) {
       const parts = decoded.split("cdn.henoticdiagnostics.com/");
@@ -106,7 +106,7 @@ export function optimizeWordPressHTML(htmlContent: string): string {
           return encodeURIComponent(seg);
         }
       }).join('/');
-      return "https://cdn.henoticdiagnostics.co.in/" + encodedPath;
+      return "https://cdn.henoticdiagnostics.com/" + encodedPath;
     }
     return decoded;
   }
@@ -122,7 +122,7 @@ export function optimizeWordPressHTML(htmlContent: string): string {
 
     // 2. Strip srcset for CDN images — CDN doesn't support dynamic resizing,
     //    and stale WordPress srcset entries cause mobile 404s.
-    if (finalSrc.includes("cdn.henoticdiagnostics.co.in") || finalSrc.includes("cdn.henoticdiagnostics.com") || finalSrc.includes("storage.googleapis.com")) {
+    if (finalSrc.includes("cdn.henoticdiagnostics.com") || finalSrc.includes("cdn.henoticdiagnostics.com") || finalSrc.includes("storage.googleapis.com")) {
       updatedTag = updatedTag.replace(/\s*srcset=["'][^"']*["']/gi, '');
       // Also strip data-srcset from lazy-load plugins
       updatedTag = updatedTag.replace(/\s*data-srcset=["'][^"']*["']/gi, '');

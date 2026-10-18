@@ -1,8 +1,8 @@
-﻿import React from "react";
+import React from "react";
 import { Metadata } from "next";
 import { notFound } from 'next/navigation';
 import LocationTemplate from "@/templates/LocationTemplate";
-import { getService } from "@/lib/wordpress/getService";
+import { getService } from "@/lib/payload/services";
 import { formatSlug } from "@/lib/utils";
 import { isValidServiceSlug, isValidLocationForRegion } from '@/lib/seo/slug-validator';
 import { getHeroImageForService } from '@/config/services';

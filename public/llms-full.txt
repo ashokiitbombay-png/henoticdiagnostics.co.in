@@ -1,4 +1,4 @@
-﻿# Henotic Diagnostics — Full Reference
+# Henotic Diagnostics — Full Reference
 
 > Henotic Diagnostics is a NABL-accredited medical diagnostic and imaging center in Kharghar, Navi Mumbai, India. Founded in 2012, it provides advanced diagnostic imaging, pathology, cardiac diagnostics, and genetic testing services. The center operates 24/7 and is equipped with 3.0 Tesla MRI, 128-slice CT, digital PET-CT, 4D ultrasound, and automated pathology systems.
 

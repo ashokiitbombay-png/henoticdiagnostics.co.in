@@ -43,7 +43,7 @@ export default function wordpressImageLoader({ src, width, quality }: ImageLoade
         return encodeURIComponent(seg);
       }
     }).join('/');
-    return `https://cdn.henoticdiagnostics.co.in/${encodedPath}`;
+    return `https://cdn.henoticdiagnostics.com/${encodedPath}`;
   }
 
   // If the image is served from Google Cloud Storage generally, handle standard URL output

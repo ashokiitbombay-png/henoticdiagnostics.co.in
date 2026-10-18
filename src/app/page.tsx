@@ -1,4 +1,4 @@
-﻿import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic';
 import HeroBlock from "@/components/blocks/HeroBlock";
 import FAQSchema from '@/components/seo/FAQSchema';
 import SimpleSubHeaderSearchBar from '@/components/features/SimpleSubHeaderSearchBar';
@@ -42,7 +42,7 @@ export const metadata = {
     url: 'https://henoticdiagnostics.co.in',
     type: 'website',
     images: [{
-      url: 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp',
+      url: 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp',
       width: 1200,
       height: 630,
       alt: 'Henotic Diagnostics — Premier Diagnostic Center in Mumbai',
@@ -52,12 +52,12 @@ export const metadata = {
     card: 'summary_large_image' as const,
     title: 'Henotic Diagnostics | Premier Diagnostic Center in Mumbai',
     description: 'NABL-accredited MRI, CT, PET-CT, Ultrasound & Pathology in Mumbai. Same-day reports.',
-    images: ['https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp'],
+    images: ['https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp'],
   },
 };
 
 export default function HomePage() {
-  const homeHeroImage = 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
+  const homeHeroImage = 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
   const homeWebPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'MedicalWebPage',

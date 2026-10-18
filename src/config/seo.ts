@@ -1,4 +1,4 @@
-﻿export const seoConfig = {
+export const seoConfig = {
   defaultTitle: "Henotic Diagnostics | Premier Diagnostic Center",
   titleTemplate: "%s | Henotic Diagnostics",
   defaultDescription: "Mumbai & Navi Mumbai's premier diagnostic center featuring advanced 3.0T MRI, low-dose CT, and automated pathology. NABH Accredited.",
@@ -9,7 +9,7 @@
     siteName: 'Henotic Diagnostics',
     images: [
       {
-        url: 'https://cdn.henoticdiagnostics.co.in/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp',
+        url: 'https://cdn.henoticdiagnostics.com/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp',
         width: 1200,
         height: 630,
         alt: 'Henotic Diagnostics Premier Facility',
@@ -20,6 +20,6 @@
     card: 'summary_large_image',
     title: 'Henotic Diagnostics',
     description: "Advanced diagnostic imaging and pathology in Mumbai.",
-    images: ['https://cdn.henoticdiagnostics.co.in/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp'],
+    images: ['https://cdn.henoticdiagnostics.com/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp'],
   }
 };

@@ -1,4 +1,4 @@
-﻿# Henotic Diagnostics Security Architecture & Audit Report
+# Henotic Diagnostics Security Architecture & Audit Report
 
 ## 1. Security Architecture Summary
 

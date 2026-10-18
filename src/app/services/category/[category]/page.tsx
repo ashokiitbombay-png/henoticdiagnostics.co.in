@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const description = cat?.description || `Browse all ${title} diagnostic services at Henotic Diagnostics.`;
   const heroImage = cat?.services?.[0]
     ? getHeroImageForService(cat.services[0])
-    : 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
+    : 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
 
   return {
     title: `${title} Services | Henotic Diagnostics`,
@@ -52,7 +52,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
   const heroImage = cat.services?.[0]
     ? getHeroImageForService(cat.services[0])
-    : 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
+    : 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',

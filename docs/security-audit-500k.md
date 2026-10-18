@@ -1,4 +1,4 @@
-﻿# Henotic Diagnostics — Enterprise Security Audit Report (500k+ URL Scale)
+# Henotic Diagnostics — Enterprise Security Audit Report (500k+ URL Scale)
 
 > **Classification**: CONFIDENTIAL — Internal Engineering & Compliance  
 > **Audit Date**: 2026-08-06  
@@ -500,8 +500,8 @@ A CSP header is **essential** for a healthcare platform to prevent XSS attacks, 
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://connect.facebook.net https://embed.tawk.to https://cdn.jsdelivr.net",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com",
     "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com",
-    "img-src 'self' data: blob: https://storage.googleapis.com https://cms.henoticdiagnostics.co.in https://secure.gravatar.com",
-    "connect-src 'self' https://cms.henoticdiagnostics.co.in https://api.razorpay.com https://*.sentry.io https://*.google-analytics.com https://*.clarity.ms",
+    "img-src 'self' data: blob: https://storage.googleapis.com https://cms.henoticdiagnostics.com https://secure.gravatar.com",
+    "connect-src 'self' https://cms.henoticdiagnostics.com https://api.razorpay.com https://*.sentry.io https://*.google-analytics.com https://*.clarity.ms",
     "frame-src 'self' https://api.razorpay.com https://embed.tawk.to",
     "object-src 'none'",
     "base-uri 'self'",

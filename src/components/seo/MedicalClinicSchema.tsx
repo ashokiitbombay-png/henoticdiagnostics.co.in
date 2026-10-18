@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 export default function MedicalClinicSchema() {
   const schemaData = {
@@ -10,7 +10,7 @@ export default function MedicalClinicSchema() {
       "DiagnosticImaging",
       "Cardiology"
     ],
-    "image": "https://cdn.henoticdiagnostics.co.in/Front%20Office/henotic-diagnostics-name-plate.webp",
+    "image": "https://cdn.henoticdiagnostics.com/Front%20Office/henotic-diagnostics-name-plate.webp",
     "@id": "https://henoticdiagnostics.co.in/#clinic",
     "url": "https://henoticdiagnostics.co.in",
     "telephone": "+91-8879327184",

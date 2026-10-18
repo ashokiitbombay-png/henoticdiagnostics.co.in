@@ -120,6 +120,26 @@ export interface PayloadCondition {
   updatedAt: string;
 }
 
+// ── Post / Blog ─────────────────────────────────────────────────────────
+
+export interface PayloadPost {
+  id: string;
+  slug: string;
+  title: string;
+  content?: PayloadRichText;
+  contentHtml?: string;
+  excerpt?: string;
+  featuredImageUrl?: string;
+  featuredImage?: PayloadMediaUpload;
+  category?: string | PayloadCategory;
+  author?: string;
+  publishedDate?: string;
+  seo?: PayloadSEO;
+  isActive: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
 // ── Payload API Response Wrappers ────────────────────────────────────────
 
 export interface PayloadListResponse<T> {
@@ -141,6 +161,7 @@ export interface PayloadFindByIDResponse<T> {
 /** Payload collection name to document type mapping */
 export interface PayloadCollectionMap {
   services: PayloadService;
+  posts: PayloadPost;
   regions: PayloadRegion;
   locations: PayloadLocation;
   conditions: PayloadCondition;

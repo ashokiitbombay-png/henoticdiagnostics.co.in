@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import Link from "next/link";
 import { services } from "@/config/services";
 import ServicesSearchFilter from "@/components/features/ServicesSearchFilter";
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     url: "https://henoticdiagnostics.co.in/services",
     type: "website",
     images: [{
-      url: "https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp",
+      url: "https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp",
       width: 1200,
       height: 630,
       alt: "Henotic Diagnostics Services Directory",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Diagnostic Services Directory | Henotic Diagnostics",
     description: "Browse 200+ NABL accredited diagnostic services in Mumbai & Navi Mumbai.",
-    images: ["https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp"],
+    images: ["https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp"],
   },
 };
 

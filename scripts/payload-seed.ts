@@ -1,4 +1,4 @@
-﻿import { SERVICE_CATEGORIES } from '../src/config/categories';
+import { SERVICE_CATEGORIES } from '../src/config/categories';
 import { REGION_NAMES, REGION_LOCATIONS } from '../src/config/locations';
 import { services } from '../src/config/services';
 import { CONDITIONS } from '../src/config/conditions';

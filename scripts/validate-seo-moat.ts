@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SEO Moat Validation Script
  * Tests all 3 components: Sitemap, Middleware, JSON-LD Schemas
  * Run against a deployed URL or local dev server

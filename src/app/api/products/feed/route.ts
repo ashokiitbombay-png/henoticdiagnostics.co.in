@@ -1,4 +1,4 @@
-﻿import { GMC_PRODUCTS } from '@/config/gmc-products';
+import { GMC_PRODUCTS } from '@/config/gmc-products';
 import { NextResponse } from 'next/server';
 
 // Helper to escape XML special characters

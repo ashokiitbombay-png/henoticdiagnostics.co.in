@@ -1,4 +1,4 @@
-﻿import ServiceHero from '@/components/blocks/ServiceHero';
+import ServiceHero from '@/components/blocks/ServiceHero';
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -13,7 +13,7 @@ import ServiceFAQ from "@/components/blocks/ServiceFAQ";
 import { getFAQsForService } from "@/config/faqs";
 import { REGION_LOCATIONS } from '@/config/locations';
 import { optimizeWordPressHTML, formatSlug } from '@/lib/utils';
-import { getService } from '@/lib/wordpress/getService';
+import { getService } from '@/lib/payload/services';
 import PartnerCenters from '@/components/blocks/PartnerCenters';
 import MedicalPseoSchema from "@/components/seo/MedicalPseoSchema";
 import { isValidServiceSlug, isValidRegionSlug } from '@/lib/seo/slug-validator';

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronRight, Home } from 'lucide-react';
@@ -9,23 +9,23 @@ import AccreditationLogos from '@/components/blocks/AccreditationLogos';
 const ACCREDITATIONS = [
   { 
     title: "NABL", 
-    img: "https://cdn.henoticdiagnostics.co.in/Accreditation%20Logos/NABL-henotic-diagnsotics-kharghar.webp" 
+    img: "https://cdn.henoticdiagnostics.com/Accreditation%20Logos/NABL-henotic-diagnsotics-kharghar.webp" 
   },
   { 
     title: "ISO", 
-    img: "https://cdn.henoticdiagnostics.co.in/Accreditation%20Logos/iso-certification-for-henotic-diagnsotics-kharghar.webp" 
+    img: "https://cdn.henoticdiagnostics.com/Accreditation%20Logos/iso-certification-for-henotic-diagnsotics-kharghar.webp" 
   },
   { 
     title: "AERB", 
-    img: "https://cdn.henoticdiagnostics.co.in/Accreditation%20Logos/Atomic_Energy_Regulatory_Board_Henotic-Diagnostics-LOGO.svg%20(1).webp" 
+    img: "https://cdn.henoticdiagnostics.com/Accreditation%20Logos/Atomic_Energy_Regulatory_Board_Henotic-Diagnostics-LOGO.svg%20(1).webp" 
   },
   { 
     title: "PCPNDT", 
-    img: "https://cdn.henoticdiagnostics.co.in/Accreditation%20Logos/pcpndt-certified-henotic-diagnsotics-kharghar.webp" 
+    img: "https://cdn.henoticdiagnostics.com/Accreditation%20Logos/pcpndt-certified-henotic-diagnsotics-kharghar.webp" 
   },
   { 
     title: "NABH", 
-    img: "https://cdn.henoticdiagnostics.co.in/Accreditation%20Logos/nabh-henotic-diagnsotics-kharghar.webp" 
+    img: "https://cdn.henoticdiagnostics.com/Accreditation%20Logos/nabh-henotic-diagnsotics-kharghar.webp" 
   },
 ];
 

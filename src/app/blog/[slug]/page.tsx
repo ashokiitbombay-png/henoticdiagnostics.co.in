@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -12,7 +12,7 @@ import {
   Phone,
   ArrowRight,
 } from "lucide-react";
-import { getBlogPost, getBlogPosts } from "@/lib/wordpress/getBlogPosts";
+import { getBlogPost, getBlogPosts } from "@/lib/payload/posts";
 import { getBlogImageUrl } from "@/lib/blog-image-helper";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
@@ -266,7 +266,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               />
             </div>
 
-            {/* WordPress Content */}
+            {/* Article Content */}
             <div
               className="wp-content-wrapper"
               dangerouslySetInnerHTML={{ __html: post.content ?? "" }}

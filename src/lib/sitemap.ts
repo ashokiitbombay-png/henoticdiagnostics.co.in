@@ -1,4 +1,4 @@
-﻿import { services } from '@/config/services';
+import { services } from '@/config/services';
 import { REGION_LOCATIONS } from '@/config/locations';
 import { CITIES } from '@/config/cities';
 import { CONDITIONS } from '@/config/conditions';

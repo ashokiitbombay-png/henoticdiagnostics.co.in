@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { getHeroImageForService } from '@/config/services';
 
 interface ServiceSchemaProps {

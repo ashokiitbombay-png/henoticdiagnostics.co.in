@@ -1,8 +1,8 @@
-﻿/**
+/**
  * 🏥 Intelligent Medical Blog Image Resolver
- * Resolves high-resolution diagnostic images for WordPress blog posts.
+ * Resolves high-resolution diagnostic images for Payload CMS blog posts.
  * Cascades:
- * 1. Post Featured Image (if set in WordPress)
+ * 1. Post Featured Image (if set in Payload CMS)
  * 2. Inline Image in Post Content (if present in HTML body)
  * 3. Keyword / Category Medical Image Matching
  * 4. Henotic Corporate Center Default Image

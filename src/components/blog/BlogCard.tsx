@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Calendar, ArrowRight, User, Clock } from "lucide-react";
@@ -54,7 +54,7 @@ function extractFirstImageUrl(html: string | undefined): string | null {
 /** Domains whitelisted in next.config.js for next/image optimization. */
 const OPTIMIZED_DOMAINS = [
   "storage.googleapis.com",
-  "cms.henoticdiagnostics.co.in",
+  "cms.henoticdiagnostics.com",
   "secure.gravatar.com",
 ];
 

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, ArrowRight, ChevronRight, Building2, Stethoscope } from 'lucide-react';
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     url: 'https://henoticdiagnostics.co.in/city',
     type: 'website',
     images: [{
-      url: 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp',
+      url: 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp',
       width: 1200,
       height: 630,
       alt: 'Diagnostic Centers by City | Henotic Diagnostics',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Diagnostic Centers by City | Henotic Diagnostics',
     description: 'Find Henotic Diagnostics centers near you in Mumbai, Navi Mumbai, Thane, Pune.',
-    images: ['https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp'],
+    images: ['https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp'],
   },
 };
 

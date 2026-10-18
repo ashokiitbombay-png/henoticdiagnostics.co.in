@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, ArrowRight, Clock, Shield, Stethoscope, Phone, Building2, ChevronRight } from 'lucide-react';
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const title = `Diagnostic Services in ${city.name} | MRI, CT, PET-CT, Pathology | Henotic Diagnostics`;
   const description = `Book ${city.name}'s best diagnostic services — MRI, CT Scan, PET-CT, Ultrasound, Blood Tests & Health Checkups. NABL accredited, same-day reports, 340+ tests available.`;
 
-  const heroImage = 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
+  const heroImage = 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
 
   return {
     title,
@@ -84,7 +84,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
     ]
   };
 
-  const heroImageUrl = 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
+  const heroImageUrl = 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
 
   // Structured Data: LocalBusiness
   const localBusinessSchema = {

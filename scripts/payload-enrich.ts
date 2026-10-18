@@ -1,4 +1,4 @@
-﻿import * as pricingModule from '../src/config/pricing';
+import * as pricingModule from '../src/config/pricing';
 import { services } from '../src/config/services';
 import { CONDITIONS } from '../src/config/conditions';
 
