@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, ArrowRight, ChevronRight, Building2, Stethoscope } from 'lucide-react';
@@ -9,15 +9,15 @@ export const metadata: Metadata = {
   title: 'Diagnostic Centers by City | Mumbai, Navi Mumbai, Thane, Pune | Henotic Diagnostics',
   description: 'Find Henotic Diagnostics centers near you. Advanced MRI, CT, PET-CT, Ultrasound, Pathology across Mumbai, Navi Mumbai, Thane, Pune & Panvel. NABL accredited.',
   alternates: {
-    canonical: 'https://www.henoticdiagnostics.com/city'
+    canonical: 'https://henoticdiagnostics.co.in/city'
   },
   openGraph: {
     title: 'Diagnostic Centers by City | Henotic Diagnostics',
     description: 'Browse diagnostic centers across major cities. NABL accredited, 340+ tests, same-day reports.',
-    url: 'https://www.henoticdiagnostics.com/city',
+    url: 'https://henoticdiagnostics.co.in/city',
     type: 'website',
     images: [{
-      url: 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp',
+      url: 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp',
       width: 1200,
       height: 630,
       alt: 'Diagnostic Centers by City | Henotic Diagnostics',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Diagnostic Centers by City | Henotic Diagnostics',
     description: 'Find Henotic Diagnostics centers near you in Mumbai, Navi Mumbai, Thane, Pune.',
-    images: ['https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp'],
+    images: ['https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp'],
   },
 };
 
@@ -48,8 +48,8 @@ export default function CitiesListingPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.henoticdiagnostics.com' },
-      { '@type': 'ListItem', position: 2, name: 'Cities', item: 'https://www.henoticdiagnostics.com/city' }
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://henoticdiagnostics.co.in' },
+      { '@type': 'ListItem', position: 2, name: 'Cities', item: 'https://henoticdiagnostics.co.in/city' }
     ]
   };
 

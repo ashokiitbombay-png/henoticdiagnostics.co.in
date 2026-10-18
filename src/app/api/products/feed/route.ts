@@ -1,4 +1,4 @@
-import { GMC_PRODUCTS } from '@/config/gmc-products';
+﻿import { GMC_PRODUCTS } from '@/config/gmc-products';
 import { NextResponse } from 'next/server';
 
 // Helper to escape XML special characters
@@ -34,7 +34,7 @@ function sanitizeDescription(desc: string): string {
 }
 
 export async function GET() {
-  const baseUrl = 'https://www.henoticdiagnostics.com';
+  const baseUrl = 'https://henoticdiagnostics.co.in';
 
   const items = GMC_PRODUCTS.map(product => {
     const cleanTitle = sanitizeTitle(product.title);
@@ -143,7 +143,7 @@ export async function GET() {
   }).join('\n');
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:g="http://base.google.com/ns/1.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:henotic="https://www.henoticdiagnostics.com/ns/1.0" version="2.0">
+<rss xmlns:g="http://base.google.com/ns/1.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:henotic="https://henoticdiagnostics.co.in/ns/1.0" version="2.0">
   <channel>
     <title>Henotic Diagnostics — High-Authority Medical Diagnostic Feed (AEO, SEO, GEO, LLMO)</title>
     <link>${baseUrl}</link>

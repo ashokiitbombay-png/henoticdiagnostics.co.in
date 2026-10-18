@@ -1,8 +1,8 @@
-export const siteConfig = {
+﻿export const siteConfig = {
   name: "Henotic Diagnostics",
   tagline: "Premier Diagnostic Center",
-  url: "https://www.henoticdiagnostics.com",
-  logoUrl: "https://cdn.henoticdiagnostics.com/Footer%20Logo/henotic-diagnostics-footer-logo.webp",
+  url: "https://henoticdiagnostics.co.in",
+  logoUrl: "https://cdn.henoticdiagnostics.co.in/Footer%20Logo/henotic-diagnostics-footer-logo.webp",
   contact: {
     address: "Second floor, Millennium Empire, Business Park, Plot No 47, D Mart Rd, Sector 15, Kharghar, Panvel, Maharashtra 410210",
     phonePrimary: "088793 27184",

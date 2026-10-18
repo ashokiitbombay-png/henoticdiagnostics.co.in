@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 import React from "react";
 import { notFound } from 'next/navigation';
 import ServiceTemplate from '@/templates/ServiceTemplate';
@@ -18,12 +18,12 @@ export async function generateMetadata({ params }: { params: Promise<{ service: 
     title: `Best ${serviceName} | Book Online | Henotic Diagnostics`,
     description: `Looking for a reliable ${serviceName}? Henotic Diagnostics offers highly accurate, NABL-accredited diagnostic services with state-of-the-art technology. Same-day reports available.`,
     alternates: {
-      canonical: `https://www.henoticdiagnostics.com/services/${resolvedParams.service}`
+      canonical: `https://henoticdiagnostics.co.in/services/${resolvedParams.service}`
     },
     openGraph: {
       title: `${serviceName} — Henotic Diagnostics`,
       description: `Book ${serviceName} at Henotic Diagnostics. NABL certified, same-day reports, 24/7 availability.`,
-      url: `https://www.henoticdiagnostics.com/services/${resolvedParams.service}`,
+      url: `https://henoticdiagnostics.co.in/services/${resolvedParams.service}`,
       images: [{
         url: heroImage,
         width: 1200,

@@ -1,4 +1,4 @@
-export const services = [
+﻿export const services = [
   // DIAGNOSTIC CENTER & HEALTH SCREENING
   "diagnostic-center", "medical-imaging-center", "radiology-center", "pathology-lab", "diagnostic-lab", "diagnostic-services", "medical-diagnostics", "diagnostic-imaging", "medical-imaging", "radiology-services", "health-checkup", "full-body-check-up", "master-health-checkup", "executive-health-checkup", "executive-health-screening", "preventive-health-checkup", "preventive-health-screening", "annual-health-checkup", "corporate-health-checkup", "employee-health-checkup", "pre-employment-health-checkup", "wellness-screening", "health-screening", "women-health-checkup", "women-health-screening", "men-health-checkup", "men-health-screening", "senior-citizen-health-checkup", "senior-health-checkup", "family-health-checkup", "heart-health-checkup", "cardiac-health-checkup", "diabetes-health-checkup", "diabetes-health-screening", "cancer-screening", "cancer-screening-package",
   // PATHOLOGY & LAB TESTS
@@ -42,7 +42,7 @@ export const services = [
 // 🖼️ SERVICE HERO IMAGES — Dynamic hero backgrounds per service category
 // ─────────────────────────────────────────────────────────────────────────────
 
-const HERO = "https://cdn.henoticdiagnostics.com/Hero%20Image";
+const HERO = "https://cdn.henoticdiagnostics.co.in/Hero%20Image";
 
 /** Direct slug → image mapping (highest priority) */
 const DIRECT_HERO_MAP: Record<string, string> = {

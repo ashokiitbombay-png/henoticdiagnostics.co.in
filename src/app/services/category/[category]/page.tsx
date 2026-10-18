@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -14,16 +14,16 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const description = cat?.description || `Browse all ${title} diagnostic services at Henotic Diagnostics.`;
   const heroImage = cat?.services?.[0]
     ? getHeroImageForService(cat.services[0])
-    : 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
+    : 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
 
   return {
     title: `${title} Services | Henotic Diagnostics`,
     description,
-    alternates: { canonical: `https://www.henoticdiagnostics.com/services/category/${category}` },
+    alternates: { canonical: `https://henoticdiagnostics.co.in/services/category/${category}` },
     openGraph: {
       title: `${title} Services | Henotic Diagnostics`,
       description,
-      url: `https://www.henoticdiagnostics.com/services/category/${category}`,
+      url: `https://henoticdiagnostics.co.in/services/category/${category}`,
       type: 'website',
       images: [{
         url: heroImage,
@@ -52,25 +52,25 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
   const heroImage = cat.services?.[0]
     ? getHeroImageForService(cat.services[0])
-    : 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
+    : 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.henoticdiagnostics.com' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.henoticdiagnostics.com/services' },
-      { '@type': 'ListItem', position: 3, name: cat.title, item: `https://www.henoticdiagnostics.com/services/category/${category}` }
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://henoticdiagnostics.co.in' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://henoticdiagnostics.co.in/services' },
+      { '@type': 'ListItem', position: 3, name: cat.title, item: `https://henoticdiagnostics.co.in/services/category/${category}` }
     ]
   };
 
   const webPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'MedicalWebPage',
-    '@id': `https://www.henoticdiagnostics.com/services/category/${category}`,
+    '@id': `https://henoticdiagnostics.co.in/services/category/${category}`,
     name: `${cat.title} Services | Henotic Diagnostics`,
     description: cat.description,
-    url: `https://www.henoticdiagnostics.com/services/category/${category}`,
+    url: `https://henoticdiagnostics.co.in/services/category/${category}`,
     primaryImageOfPage: {
       '@type': 'ImageObject',
       url: heroImage,
@@ -83,7 +83,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
     publisher: {
       '@type': 'Organization',
       name: 'Henotic Diagnostics',
-      url: 'https://www.henoticdiagnostics.com'
+      url: 'https://henoticdiagnostics.co.in'
     }
   };
 

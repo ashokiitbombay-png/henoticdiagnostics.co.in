@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 interface SchemaMarkupProps {
   service?: string;
@@ -19,14 +19,14 @@ export default function SchemaMarkup({ service, location }: SchemaMarkupProps) {
       "price": "1500",
       "priceCurrency": "INR",
       "availability": "https://schema.org/InStock",
-      "url": `https://www.henoticdiagnostics.com/services`,
+      "url": `https://henoticdiagnostics.co.in/services`,
       "seller": {
         "@type": "MedicalOrganization",
         "name": "Henotic Diagnostics"
       }
     },
     "provider": {
-      "@id": "https://www.henoticdiagnostics.com/#clinic"
+      "@id": "https://henoticdiagnostics.co.in/#clinic"
     }
   };
 

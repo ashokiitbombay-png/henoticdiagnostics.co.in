@@ -1,11 +1,11 @@
-import React from "react";
+﻿import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Cancellation Policy | Henotic Diagnostics",
   description: "Learn about the booking cancellation guidelines for Henotic Diagnostics services, including flexible rules and exceptions.",
   alternates: {
-    canonical: "https://www.henoticdiagnostics.com/cancellation-policy"
+    canonical: "https://henoticdiagnostics.co.in/cancellation-policy"
   }
 };
 

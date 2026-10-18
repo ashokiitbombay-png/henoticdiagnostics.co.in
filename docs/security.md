@@ -1,8 +1,8 @@
-# Henotic Diagnostics Security Architecture & Audit Report
+﻿# Henotic Diagnostics Security Architecture & Audit Report
 
 ## 1. Security Architecture Summary
 
-This document details the security model, vulnerability prevention rules, credential safety policies, and transport security controls enforced across the **Henotic Diagnostics** web platform (`www.henoticdiagnostics.com`).
+This document details the security model, vulnerability prevention rules, credential safety policies, and transport security controls enforced across the **Henotic Diagnostics** web platform (`henoticdiagnostics.co.in`).
 
 The application adheres to OWASP Web Application Security standards, HIPAA/NABL patient data privacy guidelines, and Vercel Edge Serverless security best practices.
 

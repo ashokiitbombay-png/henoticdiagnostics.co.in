@@ -1,4 +1,4 @@
-// Doctor & Radiologist Profiles for Henotic Diagnostics PSEO Platform
+﻿// Doctor & Radiologist Profiles for Henotic Diagnostics PSEO Platform
 // All profiles are medically accurate with real Indian medical qualifications
 
 export interface DoctorProfile {
@@ -16,7 +16,7 @@ export interface DoctorProfile {
   imageUrl?: string;
 }
 
-const DOCTOR_IMAGE = 'https://cdn.henoticdiagnostics.com/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp';
+const DOCTOR_IMAGE = 'https://cdn.henoticdiagnostics.co.in/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp';
 
 export const DOCTORS: DoctorProfile[] = [
   // ────────────────────────────────────

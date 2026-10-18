@@ -1,11 +1,11 @@
-import React from "react";
+﻿import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Return Policy | Henotic Diagnostics",
   description: "Read about returning diagnostic monitoring equipment and self-collection pathology kits to Henotic Diagnostics.",
   alternates: {
-    canonical: "https://www.henoticdiagnostics.com/return-policy"
+    canonical: "https://henoticdiagnostics.co.in/return-policy"
   }
 };
 

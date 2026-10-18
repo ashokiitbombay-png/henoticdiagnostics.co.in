@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import MedicalClinicSchema from '@/components/seo/MedicalClinicSchema';
 import { OrganizationSchema } from '@/components/seo/OrganizationSchema';
@@ -21,7 +21,7 @@ const SecondFooter = dynamic(() => import("@/components/layout/SecondFooter"));
 const SiteFooter = dynamic(() => import("@/components/layout/SiteFooter"));
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.henoticdiagnostics.com'),
+  metadataBase: new URL('https://henoticdiagnostics.co.in'),
   title: {
     default: 'Henotic Diagnostics | Premier Diagnostic Center',
     template: '%s | Henotic Diagnostics'
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://www.henoticdiagnostics.com',
+    canonical: 'https://henoticdiagnostics.co.in',
   },
   robots: {
     index: true,
@@ -49,11 +49,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.henoticdiagnostics.com',
+    url: 'https://henoticdiagnostics.co.in',
     siteName: 'Henotic Diagnostics',
     images: [
       {
-        url: 'https://cdn.henoticdiagnostics.com/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp',
+        url: 'https://cdn.henoticdiagnostics.co.in/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp',
         width: 1200,
         height: 630,
         alt: 'Henotic Diagnostics Premier Facility',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Henotic Diagnostics',
     description: "Advanced diagnostic imaging and pathology in Mumbai.",
-    images: ['https://cdn.henoticdiagnostics.com/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp'],
+    images: ['https://cdn.henoticdiagnostics.co.in/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp'],
   }
 };
 
@@ -72,8 +72,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html suppressHydrationWarning lang="en" data-scroll-behavior="smooth">
         <head>
-          <link rel="preconnect" href="https://cdn.henoticdiagnostics.com" crossOrigin="anonymous" />
-          <link rel="dns-prefetch" href="https://cdn.henoticdiagnostics.com" />
+          <link rel="preconnect" href="https://cdn.henoticdiagnostics.co.in" crossOrigin="anonymous" />
+          <link rel="dns-prefetch" href="https://cdn.henoticdiagnostics.co.in" />
           {/* PWA — favicon/icon/apple-icon auto-detected by Next.js from src/app/ */}
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#1e3a5f" />
@@ -87,15 +87,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             dangerouslySetInnerHTML={{ __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "y5fb4rz2a2");` }}
           />
           {/* Hreflang for multi-language SEO */}
-          <link rel="alternate" hrefLang="en-IN" href="https://www.henoticdiagnostics.com" />
-          <link rel="alternate" hrefLang="hi-IN" href="https://www.henoticdiagnostics.com" />
-          <link rel="alternate" hrefLang="mr-IN" href="https://www.henoticdiagnostics.com" />
-          <link rel="alternate" hrefLang="x-default" href="https://www.henoticdiagnostics.com" />
+          <link rel="alternate" hrefLang="en-IN" href="https://henoticdiagnostics.co.in" />
+          <link rel="alternate" hrefLang="hi-IN" href="https://henoticdiagnostics.co.in" />
+          <link rel="alternate" hrefLang="mr-IN" href="https://henoticdiagnostics.co.in" />
+          <link rel="alternate" hrefLang="x-default" href="https://henoticdiagnostics.co.in" />
           {/* Preload LCP hero image — direct from GCS CDN, no /_next/image proxy */}
           <link
             rel="preload"
             as="image"
-            href="https://cdn.henoticdiagnostics.com/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp"
+            href="https://cdn.henoticdiagnostics.co.in/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp"
             type="image/webp"
           />
         </head>
@@ -119,10 +119,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@context': 'https://schema.org',
               '@type': 'WebSite',
               name: 'Henotic Diagnostics',
-              url: 'https://www.henoticdiagnostics.com',
+              url: 'https://henoticdiagnostics.co.in',
               potentialAction: {
                 '@type': 'SearchAction',
-                target: 'https://www.henoticdiagnostics.com/services?q={search_term_string}',
+                target: 'https://henoticdiagnostics.co.in/services?q={search_term_string}',
                 'query-input': 'required name=search_term_string',
               },
             }) }}

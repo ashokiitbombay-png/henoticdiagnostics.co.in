@@ -1,11 +1,11 @@
-/**
+﻿/**
  * 🏅 Accreditation Certificate Registry
  * Central mapping of accreditation logos → certificate images.
  * Used across ServiceHero, HeroBlock, Accreditations, and any component
  * that displays accreditation logos.
  */
 
-const CERT_BASE = "https://cdn.henoticdiagnostics.com/Certificates";
+const CERT_BASE = "https://cdn.henoticdiagnostics.co.in/Certificates";
 
 export const CERTIFICATE_MAP: Record<string, string> = {
   "CAP":    `${CERT_BASE}/Certificates_henotic-diagnostics-cap-certified.webp`,

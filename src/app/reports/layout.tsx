@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Download Reports | Henotic Diagnostics',
   description: 'Access and download your diagnostic reports securely online.',
   alternates: {
-    canonical: 'https://www.henoticdiagnostics.com/reports',
+    canonical: 'https://henoticdiagnostics.co.in/reports',
   },
 };
 

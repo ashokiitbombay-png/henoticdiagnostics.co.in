@@ -1,4 +1,4 @@
-import { REGION_NAMES } from '@/config/locations';
+﻿import { REGION_NAMES } from '@/config/locations';
 import { getPricingForService } from '@/config/pricing';
 import { getFAQsForService } from '@/config/faqs';
 import { getConditionById } from '@/config/conditions';
@@ -6,7 +6,7 @@ import { getDoctorById } from '@/config/doctors';
 import { getComparisonBySlug } from '@/config/comparisons';
 import { getHeroImageForService } from '@/config/services';
 
-const BASE_URL = 'https://www.henoticdiagnostics.com';
+const BASE_URL = 'https://henoticdiagnostics.co.in';
 
 // ── Medical Organization Shared Entity ────────────────────────────────────
 export const HENOTIC_MEDICAL_ORGANIZATION = {
@@ -18,7 +18,7 @@ export const HENOTIC_MEDICAL_ORGANIZATION = {
   logo: `${BASE_URL}/icon.svg`,
   image: `${BASE_URL}/icon.svg`,
   telephone: '+91-8879327184',
-  email: 'info@henoticdiagnostics.com',
+  email: 'info@henoticdiagnostics.co.in',
   medicalSpecialty: [
     'Radiology',
     'Pathology',
@@ -269,7 +269,7 @@ export function generateConditionSchema(conditionId: string) {
 
   const condHeroImage = condition.recommendedServices?.[0]
     ? getHeroImageForService(condition.recommendedServices[0])
-    : 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
+    : 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
 
   const medicalWebPageSchema = {
     '@context': 'https://schema.org',
@@ -317,7 +317,7 @@ export function generateDoctorSchema(doctorId: string) {
   if (!doctor) return null;
 
   const pageUrl = `${BASE_URL}/doctors/${doctorId}`;
-  const docHeroImage = doctor.imageUrl || 'https://cdn.henoticdiagnostics.com/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp';
+  const docHeroImage = doctor.imageUrl || 'https://cdn.henoticdiagnostics.co.in/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp';
 
   const physicianSchema = {
     '@context': 'https://schema.org',

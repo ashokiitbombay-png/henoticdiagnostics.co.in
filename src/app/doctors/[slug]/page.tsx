@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -13,16 +13,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const doc = DOCTORS.find(d => d.id === slug);
   const title = doc ? `${doc.name} - ${doc.designation} | Henotic Diagnostics` : 'Doctor Profile';
   const description = doc?.bio || 'Expert medical professionals at Henotic Diagnostics.';
-  const doctorImage = doc?.imageUrl || 'https://cdn.henoticdiagnostics.com/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp';
+  const doctorImage = doc?.imageUrl || 'https://cdn.henoticdiagnostics.co.in/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp';
 
   return {
     title,
     description,
-    alternates: { canonical: `https://www.henoticdiagnostics.com/doctors/${slug}` },
+    alternates: { canonical: `https://henoticdiagnostics.co.in/doctors/${slug}` },
     openGraph: {
       title,
       description,
-      url: `https://www.henoticdiagnostics.com/doctors/${slug}`,
+      url: `https://henoticdiagnostics.co.in/doctors/${slug}`,
       type: 'profile',
       images: [{
         url: doctorImage,

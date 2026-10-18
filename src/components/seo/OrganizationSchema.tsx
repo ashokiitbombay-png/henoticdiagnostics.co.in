@@ -1,19 +1,19 @@
-import React from 'react';
+﻿import React from 'react';
 
 export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://www.henoticdiagnostics.com/#organization",
+    "@id": "https://henoticdiagnostics.co.in/#organization",
     "name": "Henotic Diagnostics",
     "alternateName": [
       "Henotic Diagnostics Centre",
       "Henotic Diagnostic Center Kharghar"
     ],
-    "url": "https://www.henoticdiagnostics.com",
+    "url": "https://henoticdiagnostics.co.in",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.henoticdiagnostics.com/icon-512.png",
+      "url": "https://henoticdiagnostics.co.in/icon-512.png",
       "width": 512,
       "height": 512
     },

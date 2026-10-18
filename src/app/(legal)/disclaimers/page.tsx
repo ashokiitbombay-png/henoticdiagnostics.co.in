@@ -1,11 +1,11 @@
-import React from "react";
+﻿import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "General Disclaimers | Henotic Diagnostics",
   description: "General disclaimers and portal terms for services provided by Henotic Diagnostics and partner networks.",
   alternates: {
-    canonical: "https://www.henoticdiagnostics.com/disclaimers"
+    canonical: "https://henoticdiagnostics.co.in/disclaimers"
   }
 };
 

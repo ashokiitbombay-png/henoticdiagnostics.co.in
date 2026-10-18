@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -70,13 +70,13 @@ export async function generateMetadata({
     title: `${post.title} | Henotic Diagnostics Blog`,
     description,
     alternates: {
-      canonical: `https://www.henoticdiagnostics.com/blog/${post.slug}`,
+      canonical: `https://henoticdiagnostics.co.in/blog/${post.slug}`,
     },
     openGraph: {
       type: "article",
       title: post.title,
       description,
-      url: `https://www.henoticdiagnostics.com/blog/${post.slug}`,
+      url: `https://henoticdiagnostics.co.in/blog/${post.slug}`,
       images: [{ url: postImageUrl, width: 1200, height: 630, alt: post.title }],
       publishedTime: post.date,
       authors: [post.author?.node?.name ?? "Henotic Team"],
@@ -138,25 +138,25 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     publisher: {
       "@type": "Organization",
       name: "Henotic Diagnostics",
-      url: "https://www.henoticdiagnostics.com",
+      url: "https://henoticdiagnostics.co.in",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.henoticdiagnostics.com/icon-512.png",
+        url: "https://henoticdiagnostics.co.in/icon-512.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://www.henoticdiagnostics.com/blog/${post.slug}`,
+      "@id": `https://henoticdiagnostics.co.in/blog/${post.slug}`,
     },
     isPartOf: {
       "@type": "WebSite",
-      "@id": "https://www.henoticdiagnostics.com/#website",
+      "@id": "https://henoticdiagnostics.co.in/#website",
       name: "Henotic Diagnostics",
     },
     reviewedBy: {
       "@type": "Organization",
       name: "Henotic Diagnostics",
-      url: "https://www.henoticdiagnostics.com",
+      url: "https://henoticdiagnostics.co.in",
     },
     audience: {
       "@type": "MedicalAudience",

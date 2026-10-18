@@ -1,11 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Phone } from 'lucide-react';
 
-const VIDEO_URL = 'https://cdn.henoticdiagnostics.com/Videos/henotic_diagnostics_trusted_health_care-corporate-video.mp4';
-const THUMBNAIL_URL = 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
-const PAGE_URL = 'https://www.henoticdiagnostics.com/video/corporate-overview';
+const VIDEO_URL = 'https://cdn.henoticdiagnostics.co.in/Videos/henotic_diagnostics_trusted_health_care-corporate-video.mp4';
+const THUMBNAIL_URL = 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
+const PAGE_URL = 'https://henoticdiagnostics.co.in/video/corporate-overview';
 
 export const metadata: Metadata = {
   title: 'Corporate Overview Video | Henotic Diagnostics',
@@ -50,7 +50,7 @@ export default function CorporateOverviewPage() {
       name: 'Henotic Diagnostics',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.henoticdiagnostics.com/icon-512.png',
+        url: 'https://henoticdiagnostics.co.in/icon-512.png',
       },
     },
   };

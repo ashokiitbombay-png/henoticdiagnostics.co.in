@@ -1,4 +1,4 @@
-import { ApolloClient, InMemoryCache, from } from '@apollo/client';
+﻿import { ApolloClient, InMemoryCache, from } from '@apollo/client';
 import { BatchHttpLink } from '@apollo/client/link/batch-http';
 import { RetryLink } from '@apollo/client/link/retry';
 import { ErrorLink } from '@apollo/client/link/error';
@@ -41,7 +41,7 @@ export const getClient = () => {
   if (!_client) {
     const rawUrl = (process.env.WORDPRESS_API_URL || process.env.NEXT_PUBLIC_WORDPRESS_API_URL || '').trim();
     const isValidUrl = rawUrl.startsWith('http://') || rawUrl.startsWith('https://');
-    const uri = isValidUrl ? rawUrl : 'https://cms.henoticdiagnostics.com/graphql';
+    const uri = isValidUrl ? rawUrl : 'https://cms.henoticdiagnostics.co.in/graphql';
 
     const batchLink = new BatchHttpLink({
       uri,

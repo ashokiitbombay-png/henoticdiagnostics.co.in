@@ -5,9 +5,13 @@ export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   const host = request.headers.get('host');
 
-  // 1. Canonical WWW Redirect (301)
-  if (host === 'henoticdiagnostics.com') {
-    url.host = 'www.henoticdiagnostics.com';
+  // 1. Canonical Domain & Legacy 301 Redirects
+  if (
+    host === 'henoticdiagnostics.com' ||
+    host === 'www.henoticdiagnostics.com' ||
+    host === 'www.henoticdiagnostics.co.in'
+  ) {
+    url.host = 'henoticdiagnostics.co.in';
     url.protocol = 'https:';
     return NextResponse.redirect(url, 301);
   }

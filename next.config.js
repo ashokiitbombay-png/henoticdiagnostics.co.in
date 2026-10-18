@@ -14,6 +14,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'cdn.henoticdiagnostics.co.in',
+      },
+      {
+        protocol: 'https',
         hostname: 'cdn.henoticdiagnostics.com',
       },
       // Keep GCS listed temporarily during transition
@@ -21,6 +25,12 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'storage.googleapis.com',
         pathname: '/wp-media-henoticbucket/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cms.henoticdiagnostics.co.in',
+        port: '',
+        pathname: '/**',
       },
       {
         protocol: 'https',
@@ -77,7 +87,7 @@ const nextConfig = {
     return [
       {
         source: '/media-cdn/:path*',
-        destination: 'https://cdn.henoticdiagnostics.com/:path*',
+        destination: 'https://cdn.henoticdiagnostics.co.in/:path*',
       },
       // Legacy backward compat: /sitemap-1.xml → /sitemap/0.xml (new dynamic route)
       {
@@ -96,7 +106,7 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-          { key: 'Content-Security-Policy', value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://connect.facebook.net https://embed.tawk.to https://cdn.jsdelivr.net https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://apis.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob: https://cdn.henoticdiagnostics.com https://storage.googleapis.com https://cms.henoticdiagnostics.com https://secure.gravatar.com https://www.facebook.com https://*.google.com https://*.gstatic.com https://*.googleapis.com; connect-src 'self' https://cdn.henoticdiagnostics.com https://storage.googleapis.com https://cms.henoticdiagnostics.com https://api.razorpay.com https://*.sentry.io https://*.google-analytics.com https://*.clarity.ms https://www.googletagmanager.com; frame-src 'self' https://api.razorpay.com https://embed.tawk.to https://www.google.com https://maps.google.com https://*.google.com https://*.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" },
+          { key: 'Content-Security-Policy', value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://connect.facebook.net https://embed.tawk.to https://cdn.jsdelivr.net https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://apis.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob: https://cdn.henoticdiagnostics.co.in https://cdn.henoticdiagnostics.com https://storage.googleapis.com https://cms.henoticdiagnostics.co.in https://cms.henoticdiagnostics.com https://secure.gravatar.com https://www.facebook.com https://*.google.com https://*.gstatic.com https://*.googleapis.com; connect-src 'self' https://cdn.henoticdiagnostics.co.in https://cdn.henoticdiagnostics.com https://storage.googleapis.com https://cms.henoticdiagnostics.co.in https://cms.henoticdiagnostics.com https://api.razorpay.com https://*.sentry.io https://*.google-analytics.com https://*.clarity.ms https://www.googletagmanager.com; frame-src 'self' https://api.razorpay.com https://embed.tawk.to https://www.google.com https://maps.google.com https://*.google.com https://*.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self), payment=(self), usb=()' }
         ],
       },

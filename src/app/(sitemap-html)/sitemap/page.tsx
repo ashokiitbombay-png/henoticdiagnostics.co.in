@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { services } from '@/config/services';
@@ -10,7 +10,7 @@ import { Map, FileText, Stethoscope, MapPin, ShoppingBag, Scale, BookOpen } from
 export const metadata: Metadata = {
   title: 'Sitemap — All Pages | Henotic Diagnostics',
   description: 'Browse the complete sitemap of Henotic Diagnostics — 37,000+ pages covering diagnostic services across Mumbai, Navi Mumbai, Thane, and Pune.',
-  alternates: { canonical: 'https://www.henoticdiagnostics.com/sitemap' },
+  alternates: { canonical: 'https://henoticdiagnostics.co.in/sitemap' },
 };
 
 const formatSlug = (slug: string) => {

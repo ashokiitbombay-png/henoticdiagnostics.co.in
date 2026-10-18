@@ -1,11 +1,11 @@
-import React from "react";
+﻿import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Grievance Redressal Policy | Henotic Diagnostics",
   description: "Read the Henotic Diagnostics patient grievance resolution policy and contact our patient advocacy team.",
   alternates: {
-    canonical: "https://www.henoticdiagnostics.com/grievance-policy"
+    canonical: "https://henoticdiagnostics.co.in/grievance-policy"
   }
 };
 

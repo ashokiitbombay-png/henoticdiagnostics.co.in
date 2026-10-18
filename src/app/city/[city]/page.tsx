@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, ArrowRight, Clock, Shield, Stethoscope, Phone, Building2, ChevronRight } from 'lucide-react';
@@ -25,20 +25,20 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const title = `Diagnostic Services in ${city.name} | MRI, CT, PET-CT, Pathology | Henotic Diagnostics`;
   const description = `Book ${city.name}'s best diagnostic services — MRI, CT Scan, PET-CT, Ultrasound, Blood Tests & Health Checkups. NABL accredited, same-day reports, 340+ tests available.`;
 
-  const heroImage = 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
+  const heroImage = 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
 
   return {
     title,
     description,
     keywords: `diagnostic center in ${city.name}, MRI scan in ${city.name}, CT scan ${city.name}, pathology lab ${city.name}, health checkup ${city.name}, blood test ${city.name}`,
     alternates: {
-      canonical: `https://www.henoticdiagnostics.com/city/${city.slug}`
+      canonical: `https://henoticdiagnostics.co.in/city/${city.slug}`
     },
     openGraph: {
       title: `Diagnostic Services in ${city.name} | Henotic Diagnostics`,
       description,
       type: 'website',
-      url: `https://www.henoticdiagnostics.com/city/${city.slug}`,
+      url: `https://henoticdiagnostics.co.in/city/${city.slug}`,
       images: [{
         url: heroImage,
         width: 1200,
@@ -78,13 +78,13 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.henoticdiagnostics.com' },
-      { '@type': 'ListItem', position: 2, name: 'Cities', item: 'https://www.henoticdiagnostics.com/city' },
-      { '@type': 'ListItem', position: 3, name: city.name, item: `https://www.henoticdiagnostics.com/city/${city.slug}` }
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://henoticdiagnostics.co.in' },
+      { '@type': 'ListItem', position: 2, name: 'Cities', item: 'https://henoticdiagnostics.co.in/city' },
+      { '@type': 'ListItem', position: 3, name: city.name, item: `https://henoticdiagnostics.co.in/city/${city.slug}` }
     ]
   };
 
-  const heroImageUrl = 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
+  const heroImageUrl = 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
 
   // Structured Data: LocalBusiness
   const localBusinessSchema = {
@@ -92,7 +92,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
     '@type': 'MedicalBusiness',
     name: `Henotic Diagnostics — ${city.name}`,
     description: city.description,
-    url: `https://www.henoticdiagnostics.com/city/${city.slug}`,
+    url: `https://henoticdiagnostics.co.in/city/${city.slug}`,
     image: heroImageUrl,
     telephone: '+918879327184',
     address: {
@@ -109,10 +109,10 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   const medicalWebPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'MedicalWebPage',
-    '@id': `https://www.henoticdiagnostics.com/city/${city.slug}`,
+    '@id': `https://henoticdiagnostics.co.in/city/${city.slug}`,
     name: `Diagnostic Services in ${city.name} | Henotic Diagnostics`,
     description: city.description,
-    url: `https://www.henoticdiagnostics.com/city/${city.slug}`,
+    url: `https://henoticdiagnostics.co.in/city/${city.slug}`,
     primaryImageOfPage: {
       '@type': 'ImageObject',
       url: heroImageUrl,
@@ -125,7 +125,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
     publisher: {
       '@type': 'Organization',
       name: 'Henotic Diagnostics',
-      url: 'https://www.henoticdiagnostics.com'
+      url: 'https://henoticdiagnostics.co.in'
     }
   };
 

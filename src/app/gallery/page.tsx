@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Camera, ArrowRight } from 'lucide-react';
@@ -9,15 +9,15 @@ export const metadata: Metadata = {
   title: 'Facility Gallery | Henotic Diagnostics — Premium Diagnostic Center',
   description:
     'Explore Henotic Diagnostics\' state-of-the-art facility, advanced MRI, CT, PET-CT scanners, pathology lab, and cardiology department in Panvel, Navi Mumbai.',
-  alternates: { canonical: 'https://www.henoticdiagnostics.com/gallery' },
+  alternates: { canonical: 'https://henoticdiagnostics.co.in/gallery' },
   openGraph: {
     title: 'Facility Gallery | Henotic Diagnostics',
     description:
       'Tour our world-class diagnostic facility featuring cutting-edge medical imaging equipment and patient-centric spaces.',
-    url: 'https://www.henoticdiagnostics.com/gallery',
+    url: 'https://henoticdiagnostics.co.in/gallery',
     type: 'website',
     images: [{
-      url: 'https://cdn.henoticdiagnostics.com/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp',
+      url: 'https://cdn.henoticdiagnostics.co.in/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp',
       width: 1200,
       height: 630,
       alt: 'Henotic Diagnostics Facility Gallery',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Facility Gallery | Henotic Diagnostics',
     description: 'Tour our world-class diagnostic facility in Panvel, Navi Mumbai.',
-    images: ['https://cdn.henoticdiagnostics.com/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp'],
+    images: ['https://cdn.henoticdiagnostics.co.in/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp'],
   },
 };
 
@@ -42,42 +42,42 @@ export interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
-    src: 'https://cdn.henoticdiagnostics.com/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp',
+    src: 'https://cdn.henoticdiagnostics.co.in/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp',
     alt: 'Henotic Diagnostics Reception Area in Panvel',
     title: 'Reception',
     category: 'Facility',
     description: 'Modern, welcoming reception designed for patient comfort',
   },
   {
-    src: 'https://cdn.henoticdiagnostics.com/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp',
+    src: 'https://cdn.henoticdiagnostics.co.in/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp',
     alt: 'Henotic Diagnostics 3T MRI Scanner in Navi Mumbai',
     title: 'MRI Scanner',
     category: 'Equipment',
     description: 'State-of-the-art 3 Tesla MRI for precision imaging',
   },
   {
-    src: 'https://cdn.henoticdiagnostics.com/CT%20SCAN/Hero/henotic-diagnostics-ct-scan-service-panvel.webp',
+    src: 'https://cdn.henoticdiagnostics.co.in/CT%20SCAN/Hero/henotic-diagnostics-ct-scan-service-panvel.webp',
     alt: 'Henotic Diagnostics 128-Slice CT Scanner in Panvel',
     title: 'CT Scanner',
     category: 'Equipment',
     description: '128-Slice CT for rapid, high-resolution diagnostics',
   },
   {
-    src: 'https://cdn.henoticdiagnostics.com/PET-CT/Hero/henotic-diagnostics-pet-ct-scan-panvel.webp',
+    src: 'https://cdn.henoticdiagnostics.co.in/PET-CT/Hero/henotic-diagnostics-pet-ct-scan-panvel.webp',
     alt: 'Henotic Diagnostics PET-CT Scanner in Panvel',
     title: 'PET-CT Scanner',
     category: 'Equipment',
     description: 'Advanced PET-CT for oncology and metabolic imaging',
   },
   {
-    src: 'https://cdn.henoticdiagnostics.com/PATHOLOGY/Hero/henotic-diagnostics-pathology-lab-panvel.webp',
+    src: 'https://cdn.henoticdiagnostics.co.in/PATHOLOGY/Hero/henotic-diagnostics-pathology-lab-panvel.webp',
     alt: 'Henotic Diagnostics NABL Certified Pathology Lab in Panvel',
     title: 'Pathology Lab',
     category: 'Laboratory',
     description: 'NABL-accredited lab with automated analyzers',
   },
   {
-    src: 'https://cdn.henoticdiagnostics.com/CARDIOLOGY/Hero/henotic-diagnostics-cardiology-panvel.webp',
+    src: 'https://cdn.henoticdiagnostics.co.in/CARDIOLOGY/Hero/henotic-diagnostics-cardiology-panvel.webp',
     alt: 'Henotic Diagnostics Cardiology Department in Panvel',
     title: 'Cardiology',
     category: 'Equipment',

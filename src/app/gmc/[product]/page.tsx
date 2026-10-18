@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${product.title} — ₹${product.price.toLocaleString('en-IN')} | Henotic Diagnostics`,
     description: product.description,
     alternates: {
-      canonical: `https://www.henoticdiagnostics.com/gmc/${slug}`,
+      canonical: `https://henoticdiagnostics.co.in/gmc/${slug}`,
     },
     openGraph: {
       title: `${product.title} — ₹${product.price.toLocaleString('en-IN')}`,
@@ -52,10 +52,10 @@ export default async function GMCProductPage({ params }: Props) {
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    '@id': `https://www.henoticdiagnostics.com/gmc/${slug}`,
+    '@id': `https://henoticdiagnostics.co.in/gmc/${slug}`,
     name: `${product.title} | Henotic Diagnostics`,
     description: product.description,
-    url: `https://www.henoticdiagnostics.com/gmc/${slug}`,
+    url: `https://henoticdiagnostics.co.in/gmc/${slug}`,
     primaryImageOfPage: {
       '@type': 'ImageObject',
       url: product.imageUrl,

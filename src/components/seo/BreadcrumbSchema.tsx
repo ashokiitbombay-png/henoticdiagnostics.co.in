@@ -1,6 +1,6 @@
-import React from "react";
+﻿import React from "react";
 
-const BASE_URL = "https://www.henoticdiagnostics.com";
+const BASE_URL = "https://henoticdiagnostics.co.in";
 
 interface BreadcrumbItem {
   name: string;

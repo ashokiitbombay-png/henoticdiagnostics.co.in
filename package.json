@@ -1,13 +1,13 @@
-{
+﻿{
   "name": "henotic-diagnostics",
   "version": "2.0.0",
   "description": "Premier NABL-accredited diagnostic center in Mumbai & Navi Mumbai — MRI, CT, PET-CT, Pathology, Cardiology",
-  "author": "Henotic Diagnostics <info@henoticdiagnostics.com>",
+  "author": "Henotic Diagnostics <info@henoticdiagnostics.co.in>",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
     "@apollo/client": "^4.2.1",
-    "@next/third-parties": "^16.2.9",
+    "@next/third-parties": "^16.4.2",
     "@upstash/ratelimit": "^2.0.8",
     "@upstash/redis": "^1.34.0",
     "@vercel/analytics": "^2.0.1",
@@ -15,8 +15,8 @@
     "dataloader": "^2.2.3",
     "graphql": "^16.14.1",
     "lucide-react": "^1.17.0",
-    "next": "^16.2.7",
-    "nodemailer": "^9.0.1",
+    "next": "^16.4.2",
+    "nodemailer": "^10.1.5",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "rxjs": "^7.8.2",

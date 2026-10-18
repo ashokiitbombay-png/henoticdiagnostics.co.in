@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 export default function MedicalClinicSchema() {
   const schemaData = {
@@ -10,9 +10,9 @@ export default function MedicalClinicSchema() {
       "DiagnosticImaging",
       "Cardiology"
     ],
-    "image": "https://cdn.henoticdiagnostics.com/Front%20Office/henotic-diagnostics-name-plate.webp",
-    "@id": "https://www.henoticdiagnostics.com/#clinic",
-    "url": "https://www.henoticdiagnostics.com",
+    "image": "https://cdn.henoticdiagnostics.co.in/Front%20Office/henotic-diagnostics-name-plate.webp",
+    "@id": "https://henoticdiagnostics.co.in/#clinic",
+    "url": "https://henoticdiagnostics.co.in",
     "telephone": "+91-8879327184",
     "priceRange": "500-15000",
     "hasMap": "https://maps.app.goo.gl/w5sBPF89Pf4nYQW97",
@@ -52,7 +52,7 @@ export default function MedicalClinicSchema() {
       "https://www.linkedin.com/company/14610097/",
       "https://in.pinterest.com/henoticdiagnostics2019/",
       "https://www.tumblr.com/henotichealthcare",
-      "https://www.henoticdiagnostics.com/"
+      "https://henoticdiagnostics.co.in/"
     ]
   };
 

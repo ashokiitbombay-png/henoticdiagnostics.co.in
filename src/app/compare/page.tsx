@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { ArrowRight, ArrowLeftRight, ChevronRight } from 'lucide-react';
@@ -9,17 +9,17 @@ export const metadata: Metadata = {
   description:
     'Side-by-side comparison of diagnostic imaging tests. Compare MRI vs CT scan, PET-CT vs CT, ultrasound vs CT, 2D Echo vs ECG & more. Expert-reviewed, medically accurate.',
   alternates: {
-    canonical: 'https://www.henoticdiagnostics.com/compare',
+    canonical: 'https://henoticdiagnostics.co.in/compare',
   },
   openGraph: {
     title: 'Compare Diagnostic Tests | Henotic Diagnostics',
     description:
       'Expert-reviewed comparisons of popular diagnostic tests. Find the right imaging modality for your needs.',
-    url: 'https://www.henoticdiagnostics.com/compare',
+    url: 'https://henoticdiagnostics.co.in/compare',
     type: 'website',
     siteName: 'Henotic Diagnostics',
     images: [{
-      url: 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp',
+      url: 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp',
       width: 1200,
       height: 630,
       alt: 'Compare Diagnostic Tests | Henotic Diagnostics',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Compare Diagnostic Tests | Henotic Diagnostics',
     description: 'Expert-reviewed comparisons of popular diagnostic tests.',
-    images: ['https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp'],
+    images: ['https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp'],
   },
 };
 
@@ -253,13 +253,13 @@ export default function ComparisonsListingPage() {
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Home',
-                item: 'https://www.henoticdiagnostics.com',
+                item: 'https://henoticdiagnostics.co.in',
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Compare Diagnostic Tests',
-                item: 'https://www.henoticdiagnostics.com/compare',
+                item: 'https://henoticdiagnostics.co.in/compare',
               },
             ],
           }),
@@ -274,11 +274,11 @@ export default function ComparisonsListingPage() {
             name: 'Compare Diagnostic Tests',
             description:
               'Side-by-side comparison of diagnostic imaging tests including MRI, CT Scan, PET-CT, Ultrasound, and more.',
-            url: 'https://www.henoticdiagnostics.com/compare',
+            url: 'https://henoticdiagnostics.co.in/compare',
             publisher: {
               '@type': 'Organization',
               name: 'Henotic Diagnostics',
-              url: 'https://www.henoticdiagnostics.com',
+              url: 'https://henoticdiagnostics.co.in',
             },
             mainEntity: {
               '@type': 'ItemList',
@@ -287,7 +287,7 @@ export default function ComparisonsListingPage() {
                 '@type': 'ListItem',
                 position: idx + 1,
                 name: `${c.serviceA.name} vs ${c.serviceB.name}`,
-                url: `https://www.henoticdiagnostics.com/compare/${c.slug}`,
+                url: `https://henoticdiagnostics.co.in/compare/${c.slug}`,
               })),
             },
           }),

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 /**
  * Payload CMS Pre-Flight Check
  *
@@ -94,7 +94,7 @@ async function main() {
     console.log('   1. Set MONGODB_URI in .env.local:');
     console.log('      MONGODB_URI="mongodb+srv://user:pass@cluster.mongodb.net/payload-db"');
     console.log('   2. Set PAYLOAD_CMS_URL in .env.local:');
-    console.log('      PAYLOAD_CMS_URL="https://payload.henoticdiagnostics.com"');
+    console.log('      PAYLOAD_CMS_URL="https://payload.henoticdiagnostics.co.in"');
     console.log('   3. Set in Vercel dashboard: Settings → Environment Variables\n');
   }
 }

@@ -1,4 +1,4 @@
-import { services } from '@/config/services';
+﻿import { services } from '@/config/services';
 import { REGION_LOCATIONS } from '@/config/locations';
 import { CITIES } from '@/config/cities';
 import { CONDITIONS } from '@/config/conditions';
@@ -8,7 +8,7 @@ import { SERVICE_CATEGORIES } from '@/config/categories';
 import { GMC_PRODUCTS } from '@/config/gmc-products';
 
 export const CHUNK_SIZE = 40000;
-export const BASE_URL = 'https://www.henoticdiagnostics.com';
+export const BASE_URL = 'https://henoticdiagnostics.co.in';
 
 const topServices = new Set([
   'mri-scan', 'ct-scan', 'pet-scan', 'ultrasound', 'blood-test', 

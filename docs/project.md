@@ -1,7 +1,7 @@
-# Project Overview & Specification
+﻿# Project Overview & Specification
 
 ## 1. Executive Summary
-**Henotic Diagnostics** (`www.henoticdiagnostics.com`) is an enterprise-grade medical diagnostic web platform serving Mumbai, Navi Mumbai, Thane, and surrounding regions. The platform connects patients with premier NABL-accredited diagnostic centers for MRI, CT Scans, PET-CT, Pathology, Ultrasound, and Cardiology services.
+**Henotic Diagnostics** (`henoticdiagnostics.co.in`) is an enterprise-grade medical diagnostic web platform serving Mumbai, Navi Mumbai, Thane, and surrounding regions. The platform connects patients with premier NABL-accredited diagnostic centers for MRI, CT Scans, PET-CT, Pathology, Ultrasound, and Cardiology services.
 
 ---
 

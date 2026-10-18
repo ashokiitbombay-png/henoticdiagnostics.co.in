@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Image from "next/image";
 import { ShieldCheck, Star, CheckCircle2, Phone, CalendarCheck, Sparkles, HeartPulse, Trophy } from "lucide-react";
 // 🛡️ Booking Engine Isolation — Client Component wrapper handles dynamic({ ssr: false })
@@ -30,7 +30,7 @@ export default function LandingPageTemplate({
         <div className="flex items-center gap-3">
           <div className="bg-white rounded-full p-1.5 shadow-md">
             <Image 
-              src="https://cdn.henoticdiagnostics.com/Site-Icon-SVG%20files/henotic-diagnostics-logo-site-icon.webp" 
+              src="https://cdn.henoticdiagnostics.co.in/Site-Icon-SVG%20files/henotic-diagnostics-logo-site-icon.webp" 
               alt="Henotic Diagnostics Logo" 
               width={36}
               height={36}

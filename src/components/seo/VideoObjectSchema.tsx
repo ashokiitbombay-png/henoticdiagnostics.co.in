@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 export interface VideoObjectSchemaProps {
   videoTitle: string;
@@ -36,7 +36,7 @@ export default function VideoObjectSchema({
       "name": "Henotic Diagnostics",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.henoticdiagnostics.com/icon-512.png"
+        "url": "https://henoticdiagnostics.co.in/icon-512.png"
       }
     }
   };

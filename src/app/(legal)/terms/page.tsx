@@ -1,11 +1,11 @@
-import React from "react";
+﻿import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service | Henotic Diagnostics",
   description: "Terms and conditions for utilizing Henotic Diagnostics services, including bookings, cancellations, and clinical report delivery.",
   alternates: {
-    canonical: "https://www.henoticdiagnostics.com/terms"
+    canonical: "https://henoticdiagnostics.co.in/terms"
   }
 };
 

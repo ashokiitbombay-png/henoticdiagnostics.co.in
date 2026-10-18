@@ -1,4 +1,4 @@
-/**
+﻿/**
  * SEO Moat Validation Script
  * Tests all 3 components: Sitemap, Middleware, JSON-LD Schemas
  * Run against a deployed URL or local dev server
@@ -87,7 +87,7 @@ async function testSitemapIndex() {
       });
 
       // Verify URL structure
-      const hasHomepage = chunkBody.includes('<loc>https://www.henoticdiagnostics.com/</loc>');
+      const hasHomepage = chunkBody.includes('<loc>https://henoticdiagnostics.co.in/</loc>');
       results.push({
         name: 'Sitemap Homepage URL',
         status: hasHomepage ? 'PASS' : 'WARN',

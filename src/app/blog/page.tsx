@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
 import { ArrowRight, PenLine, Newspaper } from "lucide-react";
@@ -9,20 +9,20 @@ export const metadata: Metadata = {
   title: "Health Articles & Medical Insights | Henotic Diagnostics Blog",
   description:
     "Expert health articles, diagnostic guides, and medical insights from Henotic Diagnostics. Stay informed about your health.",
-  alternates: { canonical: "https://www.henoticdiagnostics.com/blog" },
+  alternates: { canonical: "https://henoticdiagnostics.co.in/blog" },
   openGraph: {
     title: "Health Articles & Medical Insights | Henotic Diagnostics Blog",
     description:
       "Expert health articles, diagnostic guides, and medical insights from Henotic Diagnostics. Stay informed about your health.",
-    url: "https://www.henoticdiagnostics.com/blog",
+    url: "https://henoticdiagnostics.co.in/blog",
     type: "website",
-    images: [{ url: 'https://cdn.henoticdiagnostics.com/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp', width: 1200, height: 630, alt: 'Health Articles & Medical Insights | Henotic Diagnostics Blog' }],
+    images: [{ url: 'https://cdn.henoticdiagnostics.co.in/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp', width: 1200, height: 630, alt: 'Health Articles & Medical Insights | Henotic Diagnostics Blog' }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Health Articles & Medical Insights | Henotic Diagnostics Blog",
     description: "Expert health articles, diagnostic guides, and medical insights from Henotic Diagnostics.",
-    images: ['https://cdn.henoticdiagnostics.com/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp'],
+    images: ['https://cdn.henoticdiagnostics.co.in/MRI%20SCAN/Hero/henotic-diagnostics-mri-scan-panvel-navi-mumbai.webp'],
   },
 };
 

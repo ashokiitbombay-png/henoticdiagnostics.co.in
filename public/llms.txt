@@ -1,4 +1,4 @@
-# Henotic Diagnostics
+﻿# Henotic Diagnostics
 
 > Henotic Diagnostics is a NABL-accredited medical diagnostic and imaging center in Kharghar, Navi Mumbai, India. Founded in 2012, it offers advanced 3.0T MRI, 128-slice CT, PET-CT, ultrasound, pathology, cardiac diagnostics, and genetic testing with same-day reports. Open 24 hours, 7 days a week.
 
@@ -17,43 +17,43 @@
 
 ## Core Pages
 
-- [Home](https://www.henoticdiagnostics.com/): Main landing page with service overview, booking, and trust signals
-- [About Us](https://www.henoticdiagnostics.com/about-us): Company history, mission, technology infrastructure, and accreditations
-- [Contact](https://www.henoticdiagnostics.com/contact): Phone, WhatsApp booking, Google Maps embed, and appointment form
-- [All Services](https://www.henoticdiagnostics.com/services): Complete directory of 250+ diagnostic services offered
+- [Home](https://henoticdiagnostics.co.in/): Main landing page with service overview, booking, and trust signals
+- [About Us](https://henoticdiagnostics.co.in/about-us): Company history, mission, technology infrastructure, and accreditations
+- [Contact](https://henoticdiagnostics.co.in/contact): Phone, WhatsApp booking, Google Maps embed, and appointment form
+- [All Services](https://henoticdiagnostics.co.in/services): Complete directory of 250+ diagnostic services offered
 
 ## Diagnostic Services
 
-- [MRI Scan](https://www.henoticdiagnostics.com/services/mri-scan): 3.0T MRI for brain, spine, joints, abdomen, and whole-body scans
-- [CT Scan](https://www.henoticdiagnostics.com/services/ct-scan): 128-slice CT for HRCT chest, brain, abdomen, and CT angiography
-- [PET-CT Scan](https://www.henoticdiagnostics.com/services/pet-scan): Whole-body FDG PET-CT for oncology, cardiac, and neurology
-- [Ultrasound](https://www.henoticdiagnostics.com/services/ultrasound): Abdominal, pelvic, obstetric, and 4D ultrasound imaging
-- [Blood Tests](https://www.henoticdiagnostics.com/services/blood-test): CBC, lipid profile, thyroid, diabetes, liver, kidney function tests
-- [Full Body Checkup](https://www.henoticdiagnostics.com/services/full-body-check-up): Comprehensive health screening packages
-- [2D Echo](https://www.henoticdiagnostics.com/services/2d-echo): Echocardiography and cardiac function assessment
-- [ECG](https://www.henoticdiagnostics.com/services/ecg): Electrocardiogram for heart rhythm analysis
-- [Mammography](https://www.henoticdiagnostics.com/services/mammography): Digital mammography for breast cancer screening
-- [DEXA Bone Scan](https://www.henoticdiagnostics.com/services/dexa-bone-scan): Bone density measurement for osteoporosis screening
-- [Pregnancy Sonography](https://www.henoticdiagnostics.com/services/pregnancy-sonography): NT scan, anomaly scan, growth scan for expectant mothers
-- [Color Doppler](https://www.henoticdiagnostics.com/services/color-doppler): Vascular, carotid, renal, and obstetric doppler studies
-- [Liver Fibroscan](https://www.henoticdiagnostics.com/services/liver-fibroscan): Non-invasive liver stiffness and fibrosis assessment
-- [Genetic Testing](https://www.henoticdiagnostics.com/services/prenatal-test): NIPT, karyotype, carrier screening, and DNA analysis
+- [MRI Scan](https://henoticdiagnostics.co.in/services/mri-scan): 3.0T MRI for brain, spine, joints, abdomen, and whole-body scans
+- [CT Scan](https://henoticdiagnostics.co.in/services/ct-scan): 128-slice CT for HRCT chest, brain, abdomen, and CT angiography
+- [PET-CT Scan](https://henoticdiagnostics.co.in/services/pet-scan): Whole-body FDG PET-CT for oncology, cardiac, and neurology
+- [Ultrasound](https://henoticdiagnostics.co.in/services/ultrasound): Abdominal, pelvic, obstetric, and 4D ultrasound imaging
+- [Blood Tests](https://henoticdiagnostics.co.in/services/blood-test): CBC, lipid profile, thyroid, diabetes, liver, kidney function tests
+- [Full Body Checkup](https://henoticdiagnostics.co.in/services/full-body-check-up): Comprehensive health screening packages
+- [2D Echo](https://henoticdiagnostics.co.in/services/2d-echo): Echocardiography and cardiac function assessment
+- [ECG](https://henoticdiagnostics.co.in/services/ecg): Electrocardiogram for heart rhythm analysis
+- [Mammography](https://henoticdiagnostics.co.in/services/mammography): Digital mammography for breast cancer screening
+- [DEXA Bone Scan](https://henoticdiagnostics.co.in/services/dexa-bone-scan): Bone density measurement for osteoporosis screening
+- [Pregnancy Sonography](https://henoticdiagnostics.co.in/services/pregnancy-sonography): NT scan, anomaly scan, growth scan for expectant mothers
+- [Color Doppler](https://henoticdiagnostics.co.in/services/color-doppler): Vascular, carotid, renal, and obstetric doppler studies
+- [Liver Fibroscan](https://henoticdiagnostics.co.in/services/liver-fibroscan): Non-invasive liver stiffness and fibrosis assessment
+- [Genetic Testing](https://henoticdiagnostics.co.in/services/prenatal-test): NIPT, karyotype, carrier screening, and DNA analysis
 
 ## Content & Resources
 
-- [Health Blog](https://www.henoticdiagnostics.com/blog): Expert-written articles on diagnostic procedures, health screenings, and preventive care
-- [Doctors Directory](https://www.henoticdiagnostics.com/doctors): Specialist doctors and radiologists associated with the center
-- [Medical Conditions](https://www.henoticdiagnostics.com/conditions): Condition-specific diagnostic guides and recommended tests
-- [Service Comparisons](https://www.henoticdiagnostics.com/compare): Side-by-side comparisons of diagnostic procedures (e.g., MRI vs CT)
-- [City Coverage](https://www.henoticdiagnostics.com/city): Locations served across Mumbai and Navi Mumbai
+- [Health Blog](https://henoticdiagnostics.co.in/blog): Expert-written articles on diagnostic procedures, health screenings, and preventive care
+- [Doctors Directory](https://henoticdiagnostics.co.in/doctors): Specialist doctors and radiologists associated with the center
+- [Medical Conditions](https://henoticdiagnostics.co.in/conditions): Condition-specific diagnostic guides and recommended tests
+- [Service Comparisons](https://henoticdiagnostics.co.in/compare): Side-by-side comparisons of diagnostic procedures (e.g., MRI vs CT)
+- [City Coverage](https://henoticdiagnostics.co.in/city): Locations served across Mumbai and Navi Mumbai
 
 ## Legal
 
-- [Privacy Policy](https://www.henoticdiagnostics.com/privacy)
-- [Terms of Service](https://www.henoticdiagnostics.com/terms)
-- [Refund Policy](https://www.henoticdiagnostics.com/refund-policy)
-- [Cancellation Policy](https://www.henoticdiagnostics.com/cancellation-policy)
-- [Medical Disclaimer](https://www.henoticdiagnostics.com/medical-disclaimer)
+- [Privacy Policy](https://henoticdiagnostics.co.in/privacy)
+- [Terms of Service](https://henoticdiagnostics.co.in/terms)
+- [Refund Policy](https://henoticdiagnostics.co.in/refund-policy)
+- [Cancellation Policy](https://henoticdiagnostics.co.in/cancellation-policy)
+- [Medical Disclaimer](https://henoticdiagnostics.co.in/medical-disclaimer)
 
 ## Social
 

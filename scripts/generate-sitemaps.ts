@@ -1,4 +1,4 @@
-import fs from 'fs';
+﻿import fs from 'fs';
 import path from 'path';
 import { services } from '../src/config/services';
 import { REGION_LOCATIONS } from '../src/config/locations';
@@ -8,7 +8,7 @@ import { CONDITIONS } from '../src/config/conditions';
 import { DOCTORS } from '../src/config/doctors';
 import { SERVICE_CATEGORIES } from '../src/config/categories';
 
-const BASE_URL = 'https://www.henoticdiagnostics.com';
+const BASE_URL = 'https://henoticdiagnostics.co.in';
 const CHUNK_SIZE = 10000;
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
 const SITEMAPS_DIR = path.join(PUBLIC_DIR, 'sitemaps');

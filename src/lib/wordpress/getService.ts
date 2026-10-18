@@ -1,4 +1,4 @@
-import { getClient } from "@/lib/apollo-client";
+﻿import { getClient } from "@/lib/apollo-client";
 import { cache } from "react";
 import { unstable_cache } from "next/cache";
 import { GET_SERVICE_BY_SLUG } from "@/lib/wordpress/queries";
@@ -6,56 +6,108 @@ import type { WordPressService, GetServiceResponse } from "@/types/cms";
 import { getFailsafeData, saveFailsafeData } from "@/lib/wordpress/failsafeStore";
 import { wpCacheThrough } from "@/lib/cache/wp-cache";
 import { CACHE_TAGS } from "@/lib/cache/tags";
+import { payloadFindBySlug } from "@/lib/payload/client";
 
 /**
- * Fetches dynamic service custom post type content from WordPress by its slug.
- *
- * Cache Architecture (3-layer):
- * 1. Next.js Data Cache (via `unstable_cache` with tags) — enables O(1)
- *    invalidation via `revalidateTag(CACHE_TAGS.service('mri-scan'), 'max')`
- * 2. Redis Cache-Through (via `wpCacheThrough`) — cross-invocation L1 cache
- *    that survives serverless cold starts
- * 3. Failsafe Store — JSON-based last-known-good fallback for total failure
- *
- * @param slug The service slug (e.g. "mri-scan", "ct-scan")
+ * Converts Payload 3.0 Lexical RichText JSON into HTML string for frontend templates
+ */
+function lexicalToHtml(content: unknown, fallbackExcerpt?: string): string {
+  if (!content) return fallbackExcerpt ? `<p>${fallbackExcerpt}</p>` : "";
+  if (typeof content === "string") return content;
+
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const root = (content as any)?.root;
+    if (root && Array.isArray(root.children)) {
+      const paragraphs = root.children
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .map((node: any) => {
+          if (Array.isArray(node.children)) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const text = node.children.map((c: any) => c.text || "").join("");
+            return text ? `<p>${text}</p>` : "";
+          }
+          return "";
+        })
+        .filter(Boolean);
+
+      if (paragraphs.length > 0) {
+        return paragraphs.join("\n");
+      }
+    }
+  } catch {
+    // Fallback to excerpt if JSON parsing fails
+  }
+
+  return fallbackExcerpt ? `<p>${fallbackExcerpt}</p>` : "";
+}
+
+/**
+ * Dual-CMS Service Fetcher (Payload CMS Primary -> WordPress GraphQL Secondary -> Failsafe Store)
  */
 async function _getService(slug: string): Promise<WordPressService | null> {
   try {
-    // Wrap in unstable_cache with CACHE_TAGS so revalidateTag() works
+    // 1. Primary Source: Payload CMS Headless API (if PAYLOAD_CMS_URL is configured)
+    if (process.env.PAYLOAD_CMS_URL) {
+      const fetchPayloadWithTags = unstable_cache(
+        async () => {
+          const payloadDoc = await payloadFindBySlug("services", slug, 1, 86400);
+          if (!payloadDoc) return null;
+
+          const htmlContent = lexicalToHtml(payloadDoc.content, payloadDoc.excerpt);
+          return {
+            title: payloadDoc.title,
+            slug: payloadDoc.slug,
+            content: htmlContent,
+          } as WordPressService;
+        },
+        ["payload-service", slug],
+        {
+          tags: [CACHE_TAGS.service(slug), CACHE_TAGS.servicesList],
+          revalidate: 86400,
+        }
+      );
+
+      const payloadService = await fetchPayloadWithTags();
+      if (payloadService) {
+        saveFailsafeData(slug, { title: payloadService.title, content: payloadService.content });
+        return payloadService;
+      }
+    }
+
+    // 2. Secondary Source: WordPress GraphQL (with 3-layer cache)
     const fetchWithTags = unstable_cache(
       async () => {
         return wpCacheThrough<WordPressService | null>(
-          'service',
+          "service",
           slug,
           async () => {
             const client = getClient();
             const { data } = await client.query<GetServiceResponse>({
               query: GET_SERVICE_BY_SLUG,
               variables: { slug },
-              fetchPolicy: "no-cache"
+              fetchPolicy: "no-cache",
             });
             return data?.service ?? null;
           }
         );
       },
-      // Cache key segments
-      ['wp-service', slug],
+      ["wp-service", slug],
       {
         tags: [CACHE_TAGS.service(slug), CACHE_TAGS.servicesList],
-        revalidate: 86400, // 24 hours — matches ISR period
+        revalidate: 86400,
       }
     );
 
     let service = await fetchWithTags();
 
-    // If cache returned null, attempt direct query before falling back to failsafe
     if (!service) {
       try {
         const client = getClient();
         const { data } = await client.query<GetServiceResponse>({
           query: GET_SERVICE_BY_SLUG,
           variables: { slug },
-          fetchPolicy: "no-cache"
+          fetchPolicy: "no-cache",
         });
         if (data?.service) {
           service = data.service;
@@ -70,7 +122,7 @@ async function _getService(slug: string): Promise<WordPressService | null> {
       return service;
     }
 
-    // Check fallback if service data is missing
+    // 3. Tertiary Source: Local Failsafe Mirror
     const fallback = getFailsafeData(slug);
     if (fallback) {
       console.log(`🛡️ [FAILSAFE ACTIVE] Serving mirrored service content for slug "${slug}".`);

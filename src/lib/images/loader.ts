@@ -10,6 +10,17 @@ interface ImageLoaderProps {
  */
 export default function wordpressImageLoader({ src, width, quality }: ImageLoaderProps): string {
   // Serve directly from CDN — primary path for all media.
+  if (src.includes("cdn.henoticdiagnostics.co.in/")) {
+    const relativePath = src.split("cdn.henoticdiagnostics.co.in/")[1];
+    const encodedPath = relativePath.split('/').map(seg => {
+      try {
+        return encodeURIComponent(decodeURIComponent(seg));
+      } catch {
+        return encodeURIComponent(seg);
+      }
+    }).join('/');
+    return `https://cdn.henoticdiagnostics.co.in/${encodedPath}`;
+  }
   if (src.includes("cdn.henoticdiagnostics.com/")) {
     const relativePath = src.split("cdn.henoticdiagnostics.com/")[1];
     const encodedPath = relativePath.split('/').map(seg => {
@@ -19,7 +30,7 @@ export default function wordpressImageLoader({ src, width, quality }: ImageLoade
         return encodeURIComponent(seg);
       }
     }).join('/');
-    return `https://cdn.henoticdiagnostics.com/${encodedPath}`;
+    return `https://cdn.henoticdiagnostics.co.in/${encodedPath}`;
   }
 
   // Legacy fallback: handle any stale GCS URLs from cached content
@@ -32,7 +43,7 @@ export default function wordpressImageLoader({ src, width, quality }: ImageLoade
         return encodeURIComponent(seg);
       }
     }).join('/');
-    return `https://cdn.henoticdiagnostics.com/${encodedPath}`;
+    return `https://cdn.henoticdiagnostics.co.in/${encodedPath}`;
   }
 
   // If the image is served from Google Cloud Storage generally, handle standard URL output

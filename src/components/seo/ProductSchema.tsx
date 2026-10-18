@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { getHeroImageForService } from '@/config/services';
 
 interface ProductSchemaProps {
@@ -29,7 +29,7 @@ export default function ProductSchema({
   reportingTime,
   bookingProcess,
 }: ProductSchemaProps) {
-  const baseUrl = 'https://www.henoticdiagnostics.com';
+  const baseUrl = 'https://henoticdiagnostics.co.in';
   const url = `${baseUrl}/services/${serviceSlug}`;
   const heroImage = getHeroImageForService(serviceSlug);
 

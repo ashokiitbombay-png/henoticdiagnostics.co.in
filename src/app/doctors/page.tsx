@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
@@ -8,19 +8,19 @@ import { DOCTORS } from '@/config/doctors';
 export const metadata: Metadata = {
   title: 'Our Expert Medical Team | Henotic Diagnostics',
   description: 'Meet our team of experienced radiologists, pathologists, and cardiologists. NABL certified diagnostic experts.',
-  alternates: { canonical: 'https://www.henoticdiagnostics.com/doctors' },
+  alternates: { canonical: 'https://henoticdiagnostics.co.in/doctors' },
   openGraph: {
     title: 'Our Expert Medical Team | Henotic Diagnostics',
     description: 'Meet our team of experienced radiologists, pathologists, and cardiologists. NABL certified diagnostic experts.',
-    url: 'https://www.henoticdiagnostics.com/doctors',
+    url: 'https://henoticdiagnostics.co.in/doctors',
     type: 'website',
-    images: [{ url: 'https://cdn.henoticdiagnostics.com/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp', width: 1200, height: 630, alt: 'Our Expert Medical Team | Henotic Diagnostics' }],
+    images: [{ url: 'https://cdn.henoticdiagnostics.co.in/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp', width: 1200, height: 630, alt: 'Our Expert Medical Team | Henotic Diagnostics' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Our Expert Medical Team | Henotic Diagnostics',
     description: 'Meet our team of experienced radiologists, pathologists, and cardiologists.',
-    images: ['https://cdn.henoticdiagnostics.com/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp'],
+    images: ['https://cdn.henoticdiagnostics.co.in/Reception%20Area/henotic-diagnostics-mri-scan-panvel.webp'],
   },
 };
 

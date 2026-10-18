@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Link from "next/link";
 import { services } from "@/config/services";
 import ServicesSearchFilter from "@/components/features/ServicesSearchFilter";
@@ -9,15 +9,15 @@ export const metadata: Metadata = {
   title: "Diagnostic Services Directory | Henotic Diagnostics",
   description: "Browse our directory of over 200+ NABL accredited diagnostic services, including 3T MRI, 128-Slice CT, Ultrasound, Cardiology, and Pathology tests.",
   alternates: {
-    canonical: "https://www.henoticdiagnostics.com/services"
+    canonical: "https://henoticdiagnostics.co.in/services"
   },
   openGraph: {
     title: "Diagnostic Services Directory | Henotic Diagnostics",
     description: "Browse our directory of over 200+ NABL accredited diagnostic services, including 3T MRI, 128-Slice CT, Ultrasound, Cardiology, and Pathology tests.",
-    url: "https://www.henoticdiagnostics.com/services",
+    url: "https://henoticdiagnostics.co.in/services",
     type: "website",
     images: [{
-      url: "https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp",
+      url: "https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp",
       width: 1200,
       height: 630,
       alt: "Henotic Diagnostics Services Directory",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Diagnostic Services Directory | Henotic Diagnostics",
     description: "Browse 200+ NABL accredited diagnostic services in Mumbai & Navi Mumbai.",
-    images: ["https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp"],
+    images: ["https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp"],
   },
 };
 
@@ -192,7 +192,7 @@ export default function ServicesIndexPage() {
             "@type": "ListItem",
             "position": index + 1,
             "name": service.title,
-            "url": `https://www.henoticdiagnostics.com/services/${service.id}`,
+            "url": `https://henoticdiagnostics.co.in/services/${service.id}`,
           })),
         }) }}
       />
@@ -202,8 +202,8 @@ export default function ServicesIndexPage() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.henoticdiagnostics.com" },
-            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.henoticdiagnostics.com/services" },
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://henoticdiagnostics.co.in" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://henoticdiagnostics.co.in/services" },
           ],
         }) }}
       />

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -24,16 +24,16 @@ export async function generateMetadata({ params }: { params: Promise<{ condition
   // Use hero image from the first recommended service for a relevant thumbnail
   const heroImage = cond?.recommendedServices?.[0]
     ? getHeroImageForService(cond.recommendedServices[0])
-    : 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
+    : 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp';
 
   return {
     title,
     description,
-    alternates: { canonical: `https://www.henoticdiagnostics.com/conditions/${condition}` },
+    alternates: { canonical: `https://henoticdiagnostics.co.in/conditions/${condition}` },
     openGraph: {
       title,
       description,
-      url: `https://www.henoticdiagnostics.com/conditions/${condition}`,
+      url: `https://henoticdiagnostics.co.in/conditions/${condition}`,
       type: 'website',
       images: [{
         url: heroImage,
@@ -82,7 +82,7 @@ export default async function ConditionPage({ params }: { params: Promise<{ cond
       {/* 🤖 Googlebot SERP Thumbnail Signal */}
       <figure className="sr-only" itemScope itemType="https://schema.org/ImageObject">
         <img
-          src={cond.recommendedServices?.[0] ? getHeroImageForService(cond.recommendedServices[0]) : 'https://cdn.henoticdiagnostics.com/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp'}
+          src={cond.recommendedServices?.[0] ? getHeroImageForService(cond.recommendedServices[0]) : 'https://cdn.henoticdiagnostics.co.in/Hero%20Image/medical-imaging-diagnostics-henotic-diagnostics-hero-image.webp'}
           alt={`${cond.title} — Diagnostic Tests at Henotic Diagnostics`}
           width={1200}
           height={630}

@@ -1,4 +1,4 @@
-import ServiceHero from '@/components/blocks/ServiceHero';
+﻿import ServiceHero from '@/components/blocks/ServiceHero';
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -38,13 +38,13 @@ export async function generateMetadata({ params }: { params: Promise<{ service: 
     description,
     keywords: `${serviceName} in ${regionName}, best ${serviceName} centers ${regionName}, ${serviceName} cost ${regionName}, diagnostic center in ${regionName}`,
     alternates: {
-      canonical: `https://www.henoticdiagnostics.com/services/${resolvedParams.service}/${resolvedParams.region}`
+      canonical: `https://henoticdiagnostics.co.in/services/${resolvedParams.service}/${resolvedParams.region}`
     },
     openGraph: {
       title,
       description,
       type: "website",
-      url: `https://www.henoticdiagnostics.com/services/${resolvedParams.service}/${resolvedParams.region}`,
+      url: `https://henoticdiagnostics.co.in/services/${resolvedParams.service}/${resolvedParams.region}`,
       images: [{
         url: heroImage,
         width: 1200,

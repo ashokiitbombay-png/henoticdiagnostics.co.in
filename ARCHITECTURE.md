@@ -1,6 +1,6 @@
-# Architecture Documentation: Henotic Diagnostics Platform
+﻿# Architecture Documentation: Henotic Diagnostics Platform
 
-Welcome to the architectural overview of the **Henotic Diagnostics** web platform (`www.henoticdiagnostics.com`). This document details the technical design, data flows, routing strategies, SEO matrix, static integrations, and deployment pipeline powering the application.
+Welcome to the architectural overview of the **Henotic Diagnostics** web platform (`henoticdiagnostics.co.in`). This document details the technical design, data flows, routing strategies, SEO matrix, static integrations, and deployment pipeline powering the application.
 
 ---
 

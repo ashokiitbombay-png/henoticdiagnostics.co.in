@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { getHeroImageForService } from '@/config/services';
 
 interface ServiceSchemaProps {
@@ -26,7 +26,7 @@ export default function ServiceSchema({
   ratingValue = "4.9",
   reviewCount = "1030"
 }: ServiceSchemaProps) {
-  const baseUrl = 'https://www.henoticdiagnostics.com';
+  const baseUrl = 'https://henoticdiagnostics.co.in';
   const url = locationName && regionName
     ? `${baseUrl}/services/${serviceSlug}/${regionName}/${locationName}`
     : regionName

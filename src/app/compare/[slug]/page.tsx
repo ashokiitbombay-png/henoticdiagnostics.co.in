@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import {
@@ -48,12 +48,12 @@ export async function generateMetadata({
     title: `${comparison.serviceA.name} vs ${comparison.serviceB.name} — Detailed Comparison`,
     description: comparison.metaDescription,
     alternates: {
-      canonical: `https://www.henoticdiagnostics.com/compare/${comparison.slug}`,
+      canonical: `https://henoticdiagnostics.co.in/compare/${comparison.slug}`,
     },
     openGraph: {
       title: comparison.title,
       description: comparison.metaDescription,
-      url: `https://www.henoticdiagnostics.com/compare/${comparison.slug}`,
+      url: `https://henoticdiagnostics.co.in/compare/${comparison.slug}`,
       type: 'article',
       siteName: 'Henotic Diagnostics',
       images: [{
@@ -102,19 +102,19 @@ export default async function ComparisonPage({
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://www.henoticdiagnostics.com',
+        item: 'https://henoticdiagnostics.co.in',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Compare Tests',
-        item: 'https://www.henoticdiagnostics.com/compare',
+        item: 'https://henoticdiagnostics.co.in/compare',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: `${comparison.serviceA.name} vs ${comparison.serviceB.name}`,
-        item: `https://www.henoticdiagnostics.com/compare/${comparison.slug}`,
+        item: `https://henoticdiagnostics.co.in/compare/${comparison.slug}`,
       },
     ],
   };

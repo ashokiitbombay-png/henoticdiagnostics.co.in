@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Metadata } from "next";
 import { notFound } from 'next/navigation';
 import LocationTemplate from "@/templates/LocationTemplate";
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ service: 
 
   const title = `Best ${serviceName} in ${locationName}, ${regionName} | Henotic Diagnostics`;
   const description = `Looking for a ${serviceName} in ${locationName}? Henotic Diagnostics offers highly accurate, NABL-accredited imaging and pathology with same-day reports. Book now!`;
-  const canonicalUrl = `https://www.henoticdiagnostics.com/services/${resolvedParams.service}/${resolvedParams.region}/${resolvedParams.location}`;
+  const canonicalUrl = `https://henoticdiagnostics.co.in/services/${resolvedParams.service}/${resolvedParams.region}/${resolvedParams.location}`;
   const heroImage = getHeroImageForService(resolvedParams.service);
 
   return {
