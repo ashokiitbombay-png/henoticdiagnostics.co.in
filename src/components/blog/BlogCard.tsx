@@ -149,8 +149,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                 alt={authorName}
                 width={24}
                 height={24}
-                className="rounded-full ring-2 ring-blue-100"
-              />
+                className="rounded-full ring-2 ring-blue-100" />
             ) : (
               <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
                 <User size={12} className="text-white" />

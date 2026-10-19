@@ -12,7 +12,7 @@ import {
   Phone,
   ArrowRight,
 } from "lucide-react";
-import { getBlogPost, getBlogPosts } from "@/lib/payload/posts";
+import { getBlogPost, getBlogPosts } from "@/lib/wordpress/getBlogPosts";
 import { getBlogImageUrl } from "@/lib/blog-image-helper";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
@@ -266,7 +266,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               />
             </div>
 
-            {/* Article Content */}
+            {/* WordPress Content */}
             <div
               className="wp-content-wrapper"
               dangerouslySetInnerHTML={{ __html: post.content ?? "" }}

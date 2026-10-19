@@ -87,23 +87,23 @@ export default function LocationTemplate({
 
           {/* Right Column: Sticky Conversion Sidebar */}
           <div className="lg:col-span-1">
-            <div className="sticky top-[100px] bg-gradient-to-br from-[#4568dc] to-[#b06ab3] rounded-[3rem] p-8 md:p-10 shadow-[0_40px_80px_-20px_rgba(176,106,179,0.5)] border-4 border-white text-white transform transition-transform hover:-translate-y-2 duration-500">
-              <h3 className="text-2xl font-black mb-6 drop-shadow-md text-slate-900">Why Choose Us in {formattedLocation}?</h3>
+            <div className="sticky top-[100px] bg-[#0F172A] rounded-[2.5rem] p-8 md:p-10 shadow-[0_30px_70px_-15px_rgba(15,23,42,0.4)] border border-slate-700/80 text-white transform transition-transform hover:-translate-y-1 duration-500">
+              <h3 className="text-2xl font-black mb-6 text-white">Why Choose Us in {formattedLocation}?</h3>
               
               <ul className="space-y-5 mb-10">
-                <li className="flex items-start gap-4 font-bold text-white/90"><CheckCircle2 className="text-white shrink-0 mt-0.5 drop-shadow" size={22}/> Zero waiting time with prior booking</li>
-                <li className="flex items-start gap-4 font-bold text-white/90"><CheckCircle2 className="text-white shrink-0 mt-0.5 drop-shadow" size={22}/> Reports delivered directly via WhatsApp</li>
-                <li className="flex items-start gap-4 font-bold text-white/90"><CheckCircle2 className="text-white shrink-0 mt-0.5 drop-shadow" size={22}/> NABL & ISO accredited precision</li>
-                <li className="flex items-start gap-4 font-bold text-white/90"><CheckCircle2 className="text-white shrink-0 mt-0.5 drop-shadow" size={22}/> Free consultation on reports</li>
+                <li className="flex items-start gap-4 font-bold text-slate-200"><CheckCircle2 className="text-teal-400 shrink-0 mt-0.5" size={22}/> Zero waiting time with prior booking</li>
+                <li className="flex items-start gap-4 font-bold text-slate-200"><CheckCircle2 className="text-teal-400 shrink-0 mt-0.5" size={22}/> Reports delivered directly via WhatsApp</li>
+                <li className="flex items-start gap-4 font-bold text-slate-200"><CheckCircle2 className="text-teal-400 shrink-0 mt-0.5" size={22}/> NABL & ISO accredited precision</li>
+                <li className="flex items-start gap-4 font-bold text-slate-200"><CheckCircle2 className="text-teal-400 shrink-0 mt-0.5" size={22}/> Free consultation on reports</li>
               </ul>
 
               <a 
                 href="#booking" 
-                className="block w-full bg-white text-blue-600 text-center font-black text-lg py-4 rounded-2xl shadow-[0_15px_30px_-5px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_40px_-5px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-all"
+                className="block w-full bg-gradient-to-r from-[#14BBA6] to-[#0B63F6] hover:from-[#0d9488] hover:to-[#0952cb] text-white text-center font-black text-lg py-4 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all"
               >
                 Book Your Slot Now
               </a>
-              <p className="text-center text-white/70 text-sm mt-4 font-bold">Priority service for {formattedLocation} patients.</p>
+              <p className="text-center text-slate-400 text-sm mt-4 font-medium">Priority service for {formattedLocation} patients.</p>
             </div>
           </div>
         </div>
@@ -139,11 +139,11 @@ export default function LocationTemplate({
       {/* 4. FULL-WIDTH PREMIUM BOOKING FORM INJECTION */}
       <section className="max-w-7xl mx-auto px-4 md:px-8 mt-24" id="booking">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-50 border border-pink-200 text-[#7a1f5c] text-sm font-extrabold uppercase tracking-widest mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-[#0B63F6] text-sm font-extrabold uppercase tracking-widest mb-4">
             <Calendar size={16} /> Instant Confirmation
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
-            Schedule Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4568dc] to-[#b06ab3]">{formattedService}</span>
+            Schedule Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0B63F6] to-[#14BBA6]">{formattedService}</span>
           </h2>
           <p className="text-lg text-slate-600 font-medium mt-4 max-w-2xl mx-auto">
             Fill out the form below to secure your priority booking at our nearest center.

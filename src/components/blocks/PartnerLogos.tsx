@@ -30,8 +30,7 @@ function LogoCard({ partner }: { partner: typeof allPartners[0] }) {
         title={partner.name}
         width={180}
         height={120}
-        className="max-w-full max-h-full object-contain transition-all duration-300 group-hover:drop-shadow-lg"
-      />
+        className="max-w-full max-h-full object-contain transition-all duration-300 group-hover:drop-shadow-lg" />
     </div>
   );
 }

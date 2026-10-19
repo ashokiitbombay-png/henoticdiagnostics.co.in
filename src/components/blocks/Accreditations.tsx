@@ -177,8 +177,7 @@ export default function Accreditations() {
                         height={112} 
                         src={item.img} 
                         alt={item.title} 
-                        className="relative z-10 w-full h-full object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-110" 
-                      />
+                        className="relative z-10 w-full h-full object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-110" />
                     </button>
 
                     {/* Titles */}

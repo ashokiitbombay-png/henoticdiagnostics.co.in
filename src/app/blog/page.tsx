@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
 import { ArrowRight, PenLine, Newspaper } from "lucide-react";
-import { getBlogPosts } from "@/lib/payload/posts";
+import { getBlogPosts } from "@/lib/wordpress/getBlogPosts";
 import BlogCard from "@/components/blog/BlogCard";
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 export default async function BlogPage() {
   const postsData = await getBlogPosts(12);
   const posts = postsData?.nodes ?? [];
-  const hasPosts = posts.length > 0;
+  const hasWordPressPosts = posts.length > 0;
 
   return (
     <main className="min-h-screen font-sans mt-[80px]">
@@ -63,7 +63,7 @@ export default async function BlogPage() {
       {/* ═══════════════════════════════════════════════════════════════════ */}
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          {hasPosts ? (
+          {hasWordPressPosts ? (
             <>
               {/* Section Header */}
               <div className="flex items-center gap-3 mb-10">

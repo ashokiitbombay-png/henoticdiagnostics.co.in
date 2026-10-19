@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import React from "react";
 import { notFound } from 'next/navigation';
 import ServiceTemplate from '@/templates/ServiceTemplate';
-import { getService } from '@/lib/payload/services';
+import { getService } from '@/lib/wordpress/getService';
 import { formatSlug } from '@/lib/utils';
 import { isValidServiceSlug } from '@/lib/seo/slug-validator';
 import { getHeroImageForService } from '@/config/services';

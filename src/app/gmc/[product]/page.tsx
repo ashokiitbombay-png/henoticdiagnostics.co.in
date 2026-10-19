@@ -166,8 +166,7 @@ export default async function GMCProductPage({ params }: Props) {
                   width={800}
                   height={600}
                   priority
-                  className="w-full h-auto object-cover"
-                />
+                  className="w-full h-auto object-cover" />
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-4 -left-4 bg-emerald-500 text-white px-5 py-2.5 rounded-xl font-black text-sm shadow-lg flex items-center gap-2">

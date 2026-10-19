@@ -29,8 +29,7 @@ export default function DoctorsTrustSignals() {
                   alt={doctor.name}
                   className="relative z-10 h-[90%] w-auto object-contain mt-auto transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
+                  sizes="(max-width: 768px) 100vw, 33vw" />
                 <div className="absolute top-6 left-6 z-20 flex items-center gap-1 bg-white/90 backdrop-blur px-3 py-1.5 rounded-full shadow-sm border border-white"><Award size={12} className={doctor.accent} /><span className="text-[9px] font-black uppercase tracking-widest text-slate-700">Verified</span></div>
               </div>
               <div className="p-8 flex flex-col flex-grow bg-slate-50/50">

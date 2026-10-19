@@ -175,16 +175,16 @@ export default function ServiceHero({
         </figure>
 
         {/* Decorative Gradient Glow */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full mix-blend-screen filter blur-[120px] opacity-20 bg-[#b06ab3]"></div>
-        <div className="absolute bottom-[-20%] left-[-10%] w-[400px] h-[400px] rounded-full mix-blend-screen filter blur-[100px] opacity-15 bg-[#4568dc]"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full mix-blend-screen filter blur-[140px] opacity-20 bg-[#0B63F6]"></div>
+        <div className="absolute bottom-[-20%] left-[-10%] w-[400px] h-[400px] rounded-full mix-blend-screen filter blur-[120px] opacity-15 bg-[#14BBA6]"></div>
 
         {/* 🧭 PREMIUM BREADCRUMB BAR — Top of everything */}
         <div className="relative z-30 pt-4 md:pt-6 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <nav 
               aria-label="Breadcrumb"
-              className="w-full sm:w-fit p-3 sm:px-6 sm:py-3.5 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.25),_0_4px_6px_rgba(0,0,0,0.1)] border border-white/20 backdrop-blur-xl overflow-x-auto whitespace-nowrap hide-scrollbar"
-              style={{ background: "linear-gradient(135deg, rgba(69,104,220,0.92) 0%, rgba(176,106,179,0.92) 50%, rgba(229,93,135,0.92) 100%)" }}
+              className="w-full sm:w-fit p-3 sm:px-6 sm:py-3.5 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.35)] border border-slate-700/80 backdrop-blur-xl overflow-x-auto whitespace-nowrap hide-scrollbar"
+              style={{ background: "linear-gradient(135deg, rgba(15,23,42,0.96) 0%, rgba(11,99,246,0.90) 100%)" }}
             >
               <ol className="flex items-center space-x-1.5 sm:space-x-2 min-w-max text-xs sm:text-sm font-black text-white drop-shadow-md">
                 {breadcrumbs.map((crumb, index) => {
@@ -199,7 +199,7 @@ export default function ServiceHero({
                       ) : (
                         <Link 
                           href={crumb.url} 
-                          className="hover:text-slate-200 hover:underline decoration-2 underline-offset-4 transition-all flex items-center gap-1.5"
+                          className="hover:text-teal-300 hover:underline decoration-2 underline-offset-4 transition-all flex items-center gap-1.5"
                         >
                           {index === 0 && <Home size={14} className="mb-0.5" />}
                           {crumb.name}
@@ -230,14 +230,14 @@ export default function ServiceHero({
               {heroTitle.includes(' in ') ? (
                 <>
                   {heroTitle.split(' in ')[0]} in{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-pink-400 to-[#E55D87]">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-300 to-teal-400">
                     {heroTitle.split(' in ').slice(1).join(' in ')}
                   </span>
                 </>
               ) : (
                 <>
                   {isServicesIndex ? (
-                    <>Our Diagnostic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-400">Services</span></>
+                    <>Our Diagnostic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">Services</span></>
                   ) : (
                     heroTitle
                   )}

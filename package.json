@@ -31,7 +31,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:pseo": "playwright test tests/pseo-regression.spec.ts",
-    "test:payload": "vitest run tests/payload.test.ts",
+    "test:dataloader": "vitest run tests/dataloader.test.ts",
     "test:cache-tags": "vitest run tests/cache-tags.test.ts",
     "payload:preflight": "tsx --env-file=.env.local scripts/payload-preflight.ts",
     "payload:indexes": "tsx --env-file=.env.local scripts/payload-create-indexes.ts"

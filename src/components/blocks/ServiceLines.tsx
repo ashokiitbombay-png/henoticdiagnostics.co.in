@@ -41,7 +41,7 @@ export default function ServiceLines() {
             <h2 className="text-4xl font-extrabold text-blue-950 mb-4">Core Modalities</h2>
             <p className="text-slate-600 text-lg font-medium">Complete spectrum of diagnostic imaging and pathology under one roof.</p>
           </div>
-          <Link href="/services" className="hidden md:flex items-center font-bold text-[#E55D87] hover:text-pink-600 transition p-2 bg-pink-50 rounded-xl px-4">
+          <Link href="/services" className="hidden md:flex items-center font-bold text-[#0B63F6] hover:text-blue-700 transition p-2 bg-blue-50 rounded-xl px-4">
             View All Departments <ArrowRight size={20} className="ml-2" />
           </Link>
         </div>
@@ -64,7 +64,7 @@ export default function ServiceLines() {
               <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                 <h3 className="text-xl font-extrabold text-white mb-2">{s.title}</h3>
                 <p className="text-blue-100 text-sm font-medium mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">{s.desc}</p>
-                <div className="flex items-center text-xs font-bold text-[#E55D87] uppercase tracking-widest bg-white/10 w-max px-3 py-1.5 rounded-full backdrop-blur-md border border-white/20">
+                <div className="flex items-center text-xs font-bold text-teal-300 uppercase tracking-widest bg-white/10 w-max px-3 py-1.5 rounded-full backdrop-blur-md border border-white/20">
                   Explore <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
@@ -74,8 +74,8 @@ export default function ServiceLines() {
 
         {/* 🏥 PREMIUM FACILITY SHOWCASE & TRUST SIGNAL CARD */}
         <div
-          className="mt-20 rounded-[2.5rem] p-1 shadow-[0_30px_80px_-15px_rgba(99,102,241,0.35),0_10px_30px_-5px_rgba(219,39,119,0.2)]"
-          style={{ background: "linear-gradient(to right, #3b82f6, #6366f1, #db2777)" }}
+          className="mt-20 rounded-[2.5rem] p-1 shadow-[0_30px_80px_-15px_rgba(11,99,246,0.25)]"
+          style={{ background: "linear-gradient(135deg, #0B63F6 0%, #14BBA6 100%)" }}
         >
           <div className="bg-white rounded-[2.3rem] p-6 sm:p-8 md:p-12">
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
@@ -87,7 +87,7 @@ export default function ServiceLines() {
                   className="relative group rounded-2xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)]"
                   style={{
                     border: "4px solid transparent",
-                    backgroundImage: "linear-gradient(white, white), linear-gradient(to right, #3b82f6, #6366f1, #db2777)",
+                    backgroundImage: "linear-gradient(white, white), linear-gradient(135deg, #0B63F6, #14BBA6)",
                     backgroundOrigin: "border-box",
                     backgroundClip: "padding-box, border-box",
                   }}
@@ -100,8 +100,7 @@ export default function ServiceLines() {
                     className="w-full h-[220px] sm:h-[280px] md:h-[340px] object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                     quality={80}
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
+                    sizes="(max-width: 1024px) 100vw, 50vw" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 sm:p-6">
                     <span className="text-white font-black text-sm sm:text-base drop-shadow-lg">
                       Henotic Diagnostics — Corporate Center
@@ -114,10 +113,10 @@ export default function ServiceLines() {
                   {GALLERY_IMAGES.map((img, i) => (
                     <div
                       key={i}
-                      className="relative group rounded-xl overflow-hidden shadow-[0_10px_30px_-8px_rgba(0,0,0,0.2)] hover:shadow-[0_15px_40px_-8px_rgba(99,102,241,0.35)] transition-all duration-500 hover:-translate-y-1"
+                      className="relative group rounded-xl overflow-hidden shadow-[0_10px_30px_-8px_rgba(0,0,0,0.2)] hover:shadow-[0_15px_40px_-8px_rgba(11,99,246,0.25)] transition-all duration-500 hover:-translate-y-1"
                       style={{
                         border: "3px solid transparent",
-                        backgroundImage: "linear-gradient(white, white), linear-gradient(to right, #3b82f6, #6366f1, #db2777)",
+                        backgroundImage: "linear-gradient(white, white), linear-gradient(135deg, #0B63F6, #14BBA6)",
                         backgroundOrigin: "border-box",
                         backgroundClip: "padding-box, border-box",
                       }}
@@ -130,8 +129,7 @@ export default function ServiceLines() {
                         className="w-full h-[100px] sm:h-[120px] object-cover transition-transform duration-500 group-hover:scale-110"
                         loading="lazy"
                         quality={80}
-                        sizes="25vw"
-                      />
+                        sizes="25vw" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2">
                         <span className="text-white text-[10px] sm:text-xs font-bold drop-shadow-md">
                           {img.alt}
@@ -148,7 +146,7 @@ export default function ServiceLines() {
                 <div className="mb-6">
                   <span
                     className="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-[0.2em] mb-4 text-white shadow-md"
-                    style={{ background: "linear-gradient(to right, #3b82f6, #6366f1, #db2777)" }}
+                    style={{ background: "linear-gradient(135deg, #0B63F6, #14BBA6)" }}
                   >
                     Multi-Specialty Diagnostics
                   </span>
@@ -157,7 +155,7 @@ export default function ServiceLines() {
                   </h3>
                   <div
                     className="w-20 h-1.5 rounded-full"
-                    style={{ background: "linear-gradient(to right, #3b82f6, #6366f1, #db2777)" }}
+                    style={{ background: "linear-gradient(135deg, #0B63F6, #14BBA6)" }}
                   />
                 </div>
 
@@ -196,16 +194,14 @@ export default function ServiceLines() {
                         src="https://cdn.henoticdiagnostics.com/ICONS-SYMBOLS/google-my-business-profile-icon.webp"
                         alt="Google Business Profile"
                         className="w-20 h-20 rounded-2xl object-cover shadow-[0_10px_30px_-8px_rgba(0,0,0,0.3)] border-2 border-white"
-                        loading="lazy"
-                      />
+                        loading="lazy" />
                       <Image
                         width={32}
                         height={32}
                         src="https://cdn.henoticdiagnostics.com/ICONS-SYMBOLS/Google.webp"
                         alt="Google"
                         className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full p-1 shadow-lg border-2 border-white object-contain"
-                        loading="lazy"
-                      />
+                        loading="lazy" />
                     </div>
 
                     {/* Rating */}
@@ -217,8 +213,7 @@ export default function ServiceLines() {
                           src="https://cdn.henoticdiagnostics.com/ICONS-SYMBOLS/Google.webp"
                           alt="Google"
                           className="w-9 h-9 object-contain drop-shadow-md"
-                          loading="lazy"
-                        />
+                          loading="lazy" />
                         <span className="text-slate-800 font-extrabold text-lg">Google Reviews</span>
                       </div>
                       <div className="flex items-center justify-center sm:justify-start gap-3 mb-2">
@@ -246,15 +241,14 @@ export default function ServiceLines() {
                         src="https://cdn.henoticdiagnostics.com/ICONS-SYMBOLS/Google-maps.webp"
                         alt="Google Maps"
                         className="w-7 h-7 object-contain drop-shadow-sm group-hover:scale-110 transition-transform"
-                        loading="lazy"
-                      />
+                        loading="lazy" />
                       View on Maps
                     </a>
                     <a
                       href="https://share.google/IcBtvtVjwozCBFMPp"
                       target="_blank" rel="noreferrer"
                       className="flex-1 flex items-center justify-center gap-2 px-5 py-3.5 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
-                      style={{ background: "linear-gradient(to right, #3b82f6, #6366f1, #db2777)" }}
+                      style={{ background: "linear-gradient(135deg, #0B63F6, #14BBA6)" }}
                     >
                       Write a Review
                     </a>

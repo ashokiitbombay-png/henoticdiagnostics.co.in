@@ -9,14 +9,31 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          50: '#f0f5ff',
-          100: '#e0ebff',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
+          50: '#F0F6FE',
+          100: '#E0EDFE',
+          200: '#BAE6FD',
+          300: '#7DD3FC',
+          400: '#38BDF8',
+          500: '#0B63F6', // Primary Medical Blue
+          600: '#0284C7',
+          700: '#0369A1',
+          800: '#075985',
+          900: '#0C4A6E',
+          navy: '#0F172A', // Dark Corporate Navy
+        },
+        medical: {
+          blue: '#0B63F6',
+          teal: '#14BBA6',
+          navy: '#0F172A',
+          slate: '#334155',
+          gray: '#64748B',
+          light: '#E2E8F0',
+          canvas: '#F8FAFC',
+          pale: '#F0F6FE',
+          green: '#22C55E',
+          orange: '#F59E0B',
+          purple: '#A855F7',
+          indigo: '#6366F1',
         },
       },
       fontFamily: {
@@ -24,12 +41,14 @@ module.exports = {
         display: ['Outfit', 'sans-serif'],
       },
       backgroundImage: {
-        'body-gradient': 'linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%)',
-        /* Your new vibrant gradient applied here */
-        'header-footer-gradient': 'linear-gradient(90deg, hsla(331, 78%, 69%, 1) 0%, hsla(238, 82%, 70%, 1) 100%)',
-        'content-gradient': 'linear-gradient(135deg, #FFFFFF 0%, #F5F8FF 40%, #EEF2FF 70%, #F6F0FF 100%)',
-        'btn-primary': 'linear-gradient(135deg, #2458E8 0%, #4A63FF 50%, #8A4EFF 100%)',
-        'btn-hover': 'linear-gradient(135deg, #0B2E9E 0%, #2458E8 50%, #7A3FD1 100%)',
+        'hero-gradient': 'linear-gradient(135deg, #0B63F6 0%, #14BBA6 100%)',
+        'hero-wash': 'linear-gradient(180deg, #EBF3FE 0%, #F8FAFC 100%)',
+        'soft-medical': 'linear-gradient(180deg, #F0F6FE 0%, #FFFFFF 100%)',
+        'cta-gradient': 'linear-gradient(135deg, #14BBA6 0%, #0B63F6 100%)',
+        'cta-gradient-hover': 'linear-gradient(135deg, #0D9488 0%, #0284C7 100%)',
+        'stats-band': 'linear-gradient(90deg, #EFF6FF 0%, #F0FDFA 100%)',
+        'card-gradient': 'linear-gradient(180deg, #FFFFFF 0%, #F0F6FF 100%)',
+        'dark-footer': '#0F172A',
       }
     },
   },

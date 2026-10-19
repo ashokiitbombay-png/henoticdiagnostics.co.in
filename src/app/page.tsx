@@ -1,11 +1,14 @@
 import dynamic from 'next/dynamic';
 import HeroBlock from "@/components/blocks/HeroBlock";
+import CategoryChips from "@/components/blocks/CategoryChips";
 import FAQSchema from '@/components/seo/FAQSchema';
-import SimpleSubHeaderSearchBar from '@/components/features/SimpleSubHeaderSearchBar';
 
-// 🚀 Lazy-load ALL below-fold components for faster LCP & reduced JS bundle
-const HomeBookingSection = dynamic(() => import("@/components/blocks/HomeBookingSection"));
+// 🚀 Lazy-load below-fold components for faster LCP & optimized JS bundle
 const RateCards = dynamic(() => import("@/components/blocks/RateCards"));
+const StatisticsBand = dynamic(() => import("@/components/blocks/StatisticsBand"));
+const WhyChooseUs = dynamic(() => import("@/components/blocks/WhyChooseUs"));
+const HomeBookingSection = dynamic(() => import("@/components/blocks/HomeBookingSection"));
+const CTASection = dynamic(() => import("@/components/blocks/CTASection"));
 const ServiceLines = dynamic(() => import("@/components/blocks/ServiceLines"));
 const MedicalTechnology = dynamic(() => import("@/components/blocks/MedicalTechnology"));
 const FacilityShowcase = dynamic(() => import("@/components/blocks/FacilityShowcase"));
@@ -18,23 +21,21 @@ const HomeFAQSection = dynamic(() => import("@/components/blocks/HomeFAQSection"
 
 /**
  * Server-side FAQ data for SSR JSON-LD schema.
- * This ensures FAQ structured data reaches non-JS crawlers (GPTBot, ClaudeBot, etc.)
- * even though the visual HomeFAQSection accordion is a client component.
+ * This ensures FAQ structured data reaches search crawlers & AI models (Googlebot, GPTBot, ClaudeBot).
  */
 const homeFaqs = [
-  { question: "What diagnostic services does Henotic Diagnostics offer?", answer: "We offer 250+ diagnostic tests including MRI, CT scan, PET-CT, ultrasound, blood tests, 2D Echo, ECG, mammography, DEXA bone scan, and comprehensive health checkup packages." },
-  { question: "Where is Henotic Diagnostics located?", answer: "Our main center is at Second Floor, Millennium Empire, Business Park, Plot No 47, D Mart Rd, Sector 15, Kharghar, Panvel, Maharashtra 410210." },
-  { question: "What are the operating hours?", answer: "We are open 24 hours a day, 7 days a week, including Sundays and public holidays." },
-  { question: "Is Henotic Diagnostics NABL accredited?", answer: "Yes, we are NABL accredited, AERB certified, PCPNDT registered, and ISO certified, ensuring the highest standards of diagnostic accuracy." },
-  { question: "How can I book a diagnostic test?", answer: "You can book via WhatsApp at +91 88793 27184, by calling us directly, or through our online booking portal on the website." },
-  { question: "How quickly are reports delivered?", answer: "Most reports are available same-day. Blood test reports are typically ready within 4-6 hours, and imaging reports within 24 hours." },
-  { question: "What advanced imaging equipment do you have?", answer: "We use a 3.0 Tesla MRI Scanner, 128-Slice CT Scanner, Digital PET-CT, 4D Ultrasound, and fully automated pathology systems." },
-  { question: "Do you offer home sample collection?", answer: "Yes, we provide home sample collection services for blood tests and pathology within Mumbai and Navi Mumbai areas." },
+  { question: "What diagnostic services does Henotic Diagnostics offer?", answer: "We offer 250+ diagnostic tests including 3T MRI, 128-Slice CT scan, PET-CT, 4D ultrasound, blood pathology tests, 2D Echo, ECG, digital X-ray, mammography, DEXA bone scans, and preventive full body health checkup packages." },
+  { question: "Where is Henotic Diagnostics located?", answer: "Our premier corporate facility is located at Second Floor, Millennium Empire, Business Park, Plot No 47, D Mart Rd, Sector 15, Kharghar, Panvel, Navi Mumbai, Maharashtra 410210." },
+  { question: "What are the operating hours?", answer: "We operate 24 hours a day, 7 days a week, including Sundays and public holidays, with 24/7 emergency diagnostic imaging availability." },
+  { question: "Is Henotic Diagnostics NABL accredited?", answer: "Yes, Henotic Diagnostics is fully NABL accredited, AERB approved, PCPNDT registered, and ISO 9001:2015 certified, meeting national and international clinical accuracy standards." },
+  { question: "How can I book a diagnostic test?", answer: "You can book directly through our online portal, call our helpline at 088793 27184, or schedule via WhatsApp for instant priority slot confirmation." },
+  { question: "How quickly are reports delivered?", answer: "Routine blood test reports are delivered digitally within 4-6 hours. Advanced radiology imaging reports (MRI, CT, PET-CT) are typically released within 12-24 hours." },
+  { question: "Do you provide home sample collection?", answer: "Yes, certified phlebotomists provide safe, hygienic doorstep sample collection across Mumbai, Navi Mumbai, Thane, and surrounding areas." },
 ];
 
 export const metadata = {
   title: "Henotic Diagnostics | Premier Diagnostic Center in Mumbai",
-  description: "Book highly accurate, NABL-accredited imaging and pathology tests with same-day reports. Find your nearest center in Mumbai & Navi Mumbai.",
+  description: "Book highly accurate, NABL-accredited imaging and pathology tests with same-day reports. 3T MRI, 128-Slice CT, 4D USG & Blood Tests in Mumbai & Navi Mumbai.",
   alternates: { canonical: 'https://henoticdiagnostics.co.in' },
   openGraph: {
     title: 'Henotic Diagnostics | Premier Diagnostic Center in Mumbai',
@@ -77,11 +78,12 @@ export default function HomePage() {
   };
 
   return (
-    <main className="w-full flex flex-col bg-white overflow-hidden mt-[80px]">
+    <main className="w-full flex flex-col bg-white overflow-hidden mt-[100px] md:mt-[112px]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeWebPageSchema) }}
       />
+      
       {/* 🤖 Googlebot SERP Thumbnail Signal */}
       <figure className="sr-only" itemScope itemType="https://schema.org/ImageObject">
         <img
@@ -95,42 +97,67 @@ export default function HomePage() {
         <figcaption itemProp="caption">Henotic Diagnostics Premier Diagnostic Facility</figcaption>
       </figure>
 
-      {/* 🌟 SIMPLE SUB-HEADER SEARCH BAR (JUST BELOW MAIN HEADER SECTION) 🌟 */}
-      <SimpleSubHeaderSearchBar />
-
+      {/* 1. HERO SECTION (Comprehensive Diagnostic Care, Search, Trust Indicators) */}
       <HeroBlock variant="home" />
 
-      {/* 🤖 SSR Answer Block — Extractable summary for AI Overviews & LLM citations */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <h2 className="text-2xl md:text-3xl font-extrabold text-blue-950 mb-4">About Henotic Diagnostics</h2>
-        <p className="text-lg text-slate-700 leading-relaxed font-medium">
-          Henotic Diagnostics is a NABL-accredited medical diagnostic and imaging center in Kharghar, Navi Mumbai. 
-          Founded in 2012, it offers 250+ diagnostic tests including 3.0 Tesla MRI, 128-slice CT scan, PET-CT, 
-          4D ultrasound, pathology, cardiac diagnostics, and genetic testing. The center operates 24 hours a day, 
-          7 days a week, and delivers same-day digital reports. Rated 4.9/5 with over 1,030 Google reviews.
+      {/* 2. MODALITY QUICK-ACCESS CHIPS (8 Circular Shortcut Badges) */}
+      <CategoryChips />
+
+      {/* 3. MOST POPULAR HEALTH PACKAGES (4-Card Enterprise Grid) */}
+      <RateCards variant="premium" />
+
+      {/* 4. STATISTICS BAND (500+ Tests, 50+ Centers, 10M+ Patients, 99% Accuracy, 24h Delivery) */}
+      <StatisticsBand />
+
+      {/* 5. WHY CHOOSE HENOTIC DIAGNOSTICS (2-Column Clinical Excellence & Laboratory Image) */}
+      <WhyChooseUs />
+
+      {/* 6. SSR AI OVERVIEW SUMMARY SECTION */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-slate-50 rounded-3xl border border-slate-200/80 my-8">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-[#0F172A] mb-3">About Henotic Diagnostics</h2>
+        <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
+          Henotic Diagnostics is a NABL-accredited medical diagnostic and imaging center headquartered in Kharghar, Navi Mumbai. 
+          Founded in 2012, it provides 250+ diagnostic investigations including 3.0 Tesla MRI, 128-slice CT scan, PET-CT, 
+          4D ultrasound, automated clinical pathology, cardiac diagnostics, and specialized genetic testing. The center operates 24/7 
+          and delivers same-day verified digital reports via patient portal and WhatsApp. Rated 4.9/5 with over 1,030 Google reviews.
         </p>
       </section>
 
-      {/* 🤖 Server-rendered FAQ Schema — ensures JSON-LD is in SSR HTML for AI crawlers */}
-      <FAQSchema faqs={homeFaqs} />
-      
-      {/* 🌟 New Premium Booking Section Injected Here! */}
+      {/* 7. FAST BOOKING SECTION */}
       <HomeBookingSection />
-      
-      <RateCards variant="premium" />
+
+      {/* 8. VIBRANT CTA BAND (Book Your Test Today - Teal-to-Blue Gradient) */}
+      <CTASection />
+
+      {/* 9. CORE SERVICE MODALITIES */}
       <ServiceLines />
+
+      {/* 10. GLOBAL TECHNOLOGY INFRASTRUCTURE (GE, Siemens, Philips) */}
       <MedicalTechnology />
+
+      {/* 11. FACILITY SHOWCASE & AMBIENCE */}
       <FacilityShowcase />
+
+      {/* 12. DOCTOR TRUST SIGNALS & SENIOR RADIOLOGISTS */}
       <DoctorsTrustSignals />
       
-      {/* 🌟 Premium Trust Signal Section Included Here! */}
+      {/* 13. GOOGLE REVIEWS & PATIENT TESTIMONIALS */}
       <GoogleReviews />
       
+      {/* 14. INSTITUTIONAL PARTNERS */}
       <PartnerLogos />
       
+      {/* 15. CORPORATE WALKTHROUGH VIDEO */}
       <CorporateVideo />
+
+      {/* 16. NATIONAL ACCREDITATIONS (NABL, AERB, ISO, PCPNDT) */}
       <Accreditations />
+
+      {/* 17. FREQUENTLY ASKED QUESTIONS */}
       <HomeFAQSection />
+
+      {/* 🤖 Server-rendered FAQ Schema for AI & Search Engine Crawlers */}
+      <FAQSchema faqs={homeFaqs} />
     </main>
   );
 }

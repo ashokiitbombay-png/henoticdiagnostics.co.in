@@ -34,9 +34,8 @@ export default function LandingPageTemplate({
               alt="Henotic Diagnostics Logo" 
               width={36}
               height={36}
-              className="w-9 h-9 object-contain" 
-              priority
-            />
+              className="w-9 h-9 object-contain w-auto h-auto" 
+              priority />
           </div>
           <div className="flex flex-col justify-center leading-none">
             <span className="text-white font-black text-lg md:text-xl tracking-tight">HENOTIC</span>
@@ -85,7 +84,7 @@ export default function LandingPageTemplate({
                 { title: "Zero Wait-Time Guarantee", desc: "Prioritized slots. Walk in, get tested, walk out." }
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-4 p-5 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
-                  <div className="bg-gradient-to-br from-blue-500 to-pink-500 p-2.5 rounded-xl text-white shrink-0 group-hover:scale-110 transition-transform">
+                  <div className="bg-gradient-to-br from-blue-500 to-teal-400 p-2.5 rounded-xl text-white shrink-0 group-hover:scale-110 transition-transform">
                     <CheckCircle2 size={20} />
                   </div>
                   <div>
@@ -118,7 +117,7 @@ export default function LandingPageTemplate({
           
           {/* Right Form Column (5 cols on lg) */}
           <div className="lg:col-span-5 relative">
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/25 to-pink-500/25 rounded-[3rem] blur-2xl -z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/25 to-teal-500/25 rounded-[3rem] blur-2xl -z-10"></div>
             <div className="bg-slate-900 border-4 border-slate-800 rounded-[3rem] p-1.5 shadow-2xl relative overflow-hidden">
               <ClientBookingForm />
             </div>

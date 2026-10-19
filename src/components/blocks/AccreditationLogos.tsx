@@ -73,8 +73,7 @@ export default function AccreditationLogos({ badges, variant = "hero" }: Accredi
                     height={64} 
                     src={badge.img} 
                     alt={`${badge.title} Certified Henotic Diagnostics`} 
-                    className="w-full h-full object-contain drop-shadow-sm" 
-                  />
+                    className="w-full h-full object-contain drop-shadow-sm" />
                   {/* Glass sheen overlay */}
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/30 to-white/70 pointer-events-none" />
                   {/* Zoom indicator on hover */}

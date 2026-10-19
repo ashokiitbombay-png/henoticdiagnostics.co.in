@@ -1,10 +1,7 @@
 "use client";
 import React from 'react';
-import Image from 'next/image';
-import { DollarSign, ShieldAlert, ArrowRight, CheckCircle } from 'lucide-react';
+import { DollarSign, ShieldAlert, ArrowRight, CheckCircle2, Activity, Droplets, Heart, Sparkles } from 'lucide-react';
 import Link from 'next/link';
-import Card from '@/components/ui/Card';
-import Button from '@/components/ui/Button';
 
 interface RateCardItem {
   name: string;
@@ -13,13 +10,16 @@ interface RateCardItem {
   requirements: string;
 }
 
-interface HealthPackage {
+export interface HealthPackage {
   title: string;
+  testCount: string;
   price: string;
   oldPrice: string;
-  img: string;
-  gradient: string;
+  discount: string;
+  includesSummary: string;
   includes: string[];
+  icon: 'body' | 'diabetes' | 'heart' | 'women';
+  popular?: boolean;
 }
 
 interface RateCardsProps {
@@ -29,85 +29,153 @@ interface RateCardsProps {
   packages?: HealthPackage[];
 }
 
-const DEFAULT_PACKAGES: HealthPackage[] = [
+const DEFAULT_ENTERPRISE_PACKAGES: HealthPackage[] = [
   {
-    title: "Comprehensive Full Body",
-    price: "₹2,999",
-    oldPrice: "₹6,500",
-    img: "https://cdn.henoticdiagnostics.com/Laboratory/henotic-diagnostics-blood-test-lab.webp",
-    gradient: "from-blue-600 to-cyan-400",
-    includes: ["Lipid Profile (Heart)", "Liver Function Test (LFT)", "Kidney Function Test (KFT)", "Thyroid Profile (T3, T4, TSH)", "Complete Hemogram (CBC)", "Diabetes Screening (HbA1c)"]
+    title: "Full Body Checkup",
+    testCount: "100+ Tests",
+    price: "₹1,299",
+    oldPrice: "₹2,500",
+    discount: "48% OFF",
+    includesSummary: "Includes CBC, Sugar, Lipid, LFT, KFT...",
+    includes: ["Complete Hemogram (CBC)", "Lipid Profile (Cholesterol)", "Liver Function Test (LFT)", "Kidney Function Test (KFT)", "Fasting Blood Sugar", "Thyroid Profile (TSH)"],
+    icon: "body",
+    popular: true
   },
   {
-    title: "Advanced Cardiac Care",
-    price: "₹4,499",
-    oldPrice: "₹8,000",
-    img: "https://cdn.henoticdiagnostics.com/2026/01/7f8eb649-tmt-test-stress-echo-test-stress-test-2d-echo-test-kharghar-henotic-diagnostics-navi-mumbai.webp",
-    gradient: "from-rose-500 to-pink-400",
-    includes: ["2D Echocardiography", "Treadmill Test (TMT)", "Electrocardiogram (ECG)", "Advanced Lipid Profile", "Cardiac Risk Markers", "Physician Consultation"]
+    title: "Diabetes Package",
+    testCount: "25+ Tests",
+    price: "₹699",
+    oldPrice: "₹1,200",
+    discount: "42% OFF",
+    includesSummary: "Includes HbA1c, FBS, PPBS...",
+    includes: ["HbA1c Glycated Hemoglobin", "Fasting Blood Glucose", "Post Prandial Blood Sugar", "Urine Routine & Micro", "Lipid Screen"],
+    icon: "diabetes"
   },
   {
-    title: "Women's Wellness Profile",
-    price: "₹3,499",
-    oldPrice: "₹7,200",
-    img: "https://cdn.henoticdiagnostics.com/Ultrasound/henotic-diagnostics-sonography-ultrasound-pregnancy-scan-anomaly%20scan-nt-scan-kharghar-taloja%2C%20roadpali-navi%20mumbai.webp",
-    gradient: "from-purple-600 to-indigo-400",
-    includes: ["Pelvic Ultrasound (USG)", "Thyroid Profile", "Vitamin D & B12 Levels", "Iron Deficiency Panel", "Hormonal Imbalance Check", "Breast Cancer Screening"]
+    title: "Heart Health Package",
+    testCount: "30+ Tests",
+    price: "₹1,499",
+    oldPrice: "₹2,800",
+    discount: "46% OFF",
+    includesSummary: "Includes Lipid Profile, ECG, HS-CRP...",
+    includes: ["2D Echocardiography / ECG", "Cardiac Risk Markers", "High Sensitivity CRP", "Advanced Lipid Profile", "Serum Electrolytes"],
+    icon: "heart"
+  },
+  {
+    title: "Women's Health Package",
+    testCount: "40+ Tests",
+    price: "₹1,199",
+    oldPrice: "₹2,200",
+    discount: "45% OFF",
+    includesSummary: "Includes Hormones, Thyroid, CBC...",
+    includes: ["Thyroid Panel (T3, T4, TSH)", "Vitamin D3 & B12 Levels", "Complete Blood Count", "Iron Deficiency Panel", "Pelvic Ultrasound Consultation"],
+    icon: "women"
   }
 ];
 
-export default function RateCards({ items, title, variant = 'list', packages = DEFAULT_PACKAGES }: RateCardsProps) {
+export default function RateCards({ items, title, variant = 'list', packages = DEFAULT_ENTERPRISE_PACKAGES }: RateCardsProps) {
   
-  // 1. PREMIUM VARIANT (Home Page Health Packages)
+  // 1. PREMIUM VARIANT (Home Page Health Packages - 4 Column Layout from Screenshot)
   if (variant === 'premium') {
     return (
-      <section id="packages" className="py-24 relative overflow-hidden bg-slate-50">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-[#fbc2eb]/40 to-transparent pointer-events-none"></div>
-
-        <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
-          <div className="text-center mb-16">
-            <span className="text-[#E55D87] font-extrabold uppercase tracking-widest text-sm mb-2 block">Exclusive Offers</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-blue-950 mb-6 drop-shadow-sm">Premium Health Packages</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto font-medium">Transparent pricing, comprehensive testing, and instant digital reports.</p>
+      <section id="packages" className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+          
+          {/* Header Row */}
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-black text-[#0F172A] tracking-tight mb-2">
+                Most Popular Health Packages
+              </h2>
+              <p className="text-slate-600 font-medium text-base">
+                Affordable, comprehensive and designed for every stage of life.
+              </p>
+            </div>
+            <Link 
+              href="/services/full-body-check-up" 
+              className="inline-flex items-center gap-1.5 text-sm font-extrabold text-[#0B63F6] hover:text-blue-700 transition-colors shrink-0"
+            >
+              View All Packages <ArrowRight size={16} />
+            </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {packages.map((pkg, idx) => (
-              <Card key={idx} className="group relative border border-white rounded-[2.5rem] overflow-hidden shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_40px_60px_-15px_rgba(0,0,0,0.2)] transition-all duration-700 bg-white/70 backdrop-blur-xl !p-0">
-                <div className="relative h-64 overflow-hidden bg-slate-200">
-                  <div className={`absolute inset-0 bg-gradient-to-t ${pkg.gradient} opacity-40 group-hover:opacity-20 transition-opacity z-10`}></div>
-                  <Image 
-                    src={pkg.img} 
-                    alt={pkg.title} 
-                    fill
-                    className="w-full h-full object-cover transform group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-out"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  
-                  <div className="absolute bottom-4 right-4 z-20 bg-white/90 backdrop-blur-md px-4 py-2 rounded-2xl shadow-lg border border-white">
-                    <div className="text-xs text-slate-500 line-through font-bold">{pkg.oldPrice}</div>
-                    <div className="text-2xl font-black text-slate-900">{pkg.price}</div>
+          {/* 4-Column Grid matching screenshot */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {packages.map((pkg, idx) => {
+              // Icon selector
+              const getIcon = () => {
+                switch (pkg.icon) {
+                  case 'diabetes':
+                    return { icon: Droplets, bg: 'bg-teal-50', text: 'text-teal-600', border: 'border-teal-100' };
+                  case 'heart':
+                    return { icon: Heart, bg: 'bg-rose-50', text: 'text-rose-600', border: 'border-rose-100' };
+                  case 'women':
+                    return { icon: Sparkles, bg: 'bg-purple-50', text: 'text-purple-600', border: 'border-purple-100' };
+                  default:
+                    return { icon: Activity, bg: 'bg-blue-50', text: 'text-[#0B63F6]', border: 'border-blue-100' };
+                }
+              };
+              const iconConfig = getIcon();
+              const IconComponent = iconConfig.icon;
+
+              return (
+                <div 
+                  key={idx} 
+                  className="group relative bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div>
+                    {/* Header: Icon + Title + Tests Count */}
+                    <div className="flex items-center gap-3.5 mb-5">
+                      <div className={`w-12 h-12 rounded-xl ${iconConfig.bg} ${iconConfig.text} border ${iconConfig.border} flex items-center justify-center shrink-0`}>
+                        <IconComponent size={24} />
+                      </div>
+                      <div>
+                        <h3 className="text-base font-extrabold text-[#0F172A] leading-tight">
+                          {pkg.title}
+                        </h3>
+                        <span className="text-xs font-semibold text-slate-500">
+                          {pkg.testCount}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Pricing Band */}
+                    <div className="flex items-baseline gap-2 mb-3">
+                      <span className="text-2xl font-black text-[#0F172A] tracking-tight">
+                        {pkg.price}
+                      </span>
+                      {pkg.oldPrice && (
+                        <span className="text-sm font-semibold text-slate-400 line-through">
+                          {pkg.oldPrice}
+                        </span>
+                      )}
+                      {pkg.discount && (
+                        <span className="text-xs font-extrabold text-red-600 bg-red-50 border border-red-100 px-2 py-0.5 rounded-md">
+                          {pkg.discount}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Inclusions preview */}
+                    <p className="text-xs font-medium text-slate-600 mb-6 leading-relaxed">
+                      {pkg.includesSummary}
+                    </p>
+                  </div>
+
+                  {/* CTA Action */}
+                  <div className="pt-2 border-t border-slate-100">
+                    <Link
+                      href="#booking"
+                      className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-gradient-to-r hover:from-[#14BBA6] hover:to-[#0B63F6] text-slate-800 hover:text-white font-extrabold text-xs transition-all duration-300 shadow-sm"
+                    >
+                      Book Now <ArrowRight size={14} />
+                    </Link>
                   </div>
                 </div>
-
-                <div className="p-8 relative bg-white/50">
-                  <h3 className="text-2xl font-extrabold text-blue-950 mb-6 transform group-hover:-translate-y-1 transition-transform duration-500">{pkg.title}</h3>
-                  <ul className="space-y-3 mb-8">
-                    {pkg.includes.map((item, i) => (
-                      <li key={i} className="flex items-start gap-3 text-slate-700 font-medium transform translate-y-2 opacity-80 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500" style={{ transitionDelay: `${i * 50}ms` }}>
-                        <CheckCircle size={18} className="text-[#E55D87] shrink-0 mt-0.5" /> {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link href="/contact" className="w-full block">
-                    <Button className="w-full text-center py-4 rounded-2xl font-extrabold uppercase tracking-widest transition-all duration-300 shadow-sm hover:shadow-md text-sm">
-                      Book Package
-                    </Button>
-                  </Link>
-                </div>
-              </Card>
-            ))}
+              );
+            })}
           </div>
+
         </div>
       </section>
     );
@@ -124,29 +192,32 @@ export default function RateCards({ items, title, variant = 'list', packages = D
   return (
     <div className="w-full bg-slate-50 border border-slate-200 rounded-[2rem] p-6 md:p-8">
       <h4 className="text-xl font-black text-slate-800 mb-6 flex items-center gap-2 uppercase tracking-wider">
-        <DollarSign size={20} className="text-emerald-500" /> {title || "Diagnostic Pricing & Details"}
+        <DollarSign size={20} className="text-[#0B63F6]" /> {title || "Diagnostic Pricing & Details"}
       </h4>
       <div className="space-y-4">
         {defaultItems.map((item, idx) => (
-          <Card key={idx} className="p-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-md hover:border-blue-100 bg-white border border-slate-100">
+          <div key={idx} className="p-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-md hover:border-blue-100 bg-white border border-slate-200 rounded-2xl">
             <div className="flex-grow">
-              <h5 className="font-extrabold text-slate-900 text-base mb-1">{item.name}</h5>
+              <h5 className="font-extrabold text-[#0F172A] text-base mb-1">{item.name}</h5>
               <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-slate-500 text-xs font-semibold">
                 <span>Duration: {item.time}</span>
                 <span>•</span>
                 <span>Requirements: {item.requirements}</span>
               </div>
             </div>
-            <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end shrink-0 border-t border-slate-50 md:border-none pt-3 md:pt-0">
+            <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end shrink-0 border-t border-slate-100 md:border-none pt-3 md:pt-0">
               <div className="text-right">
                 <span className="text-xs text-slate-400 font-bold block">Estimated Price</span>
-                <span className="text-lg font-black text-emerald-600">{item.price}</span>
+                <span className="text-lg font-black text-teal-600">{item.price}</span>
               </div>
-              <Link href="#booking" className="p-3 bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white rounded-xl transition-all duration-300">
+              <Link 
+                href="#booking" 
+                className="p-3 bg-blue-50 text-[#0B63F6] hover:bg-[#0B63F6] hover:text-white rounded-xl transition-all duration-300"
+              >
                 <ArrowRight size={18} />
               </Link>
             </div>
-          </Card>
+          </div>
         ))}
       </div>
       <p className="mt-4 text-xs font-bold text-slate-400 flex items-center gap-1.5 justify-center md:justify-start">

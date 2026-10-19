@@ -63,8 +63,7 @@ export default function GoogleReviews() {
               className="relative z-10 w-full h-64 md:h-80 object-cover rounded-3xl border-4 border-white shadow-xl transition-transform duration-500 group-hover:scale-[1.02]"
               loading="lazy"
               quality={80}
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+              sizes="(max-width: 768px) 100vw, 50vw" />
             
             {/* Floating Google Profile Badge */}
             <div className="absolute -bottom-8 -right-8 md:-right-10 z-20 bg-white p-3 rounded-3xl shadow-[0_20px_50px_-10px_rgba(0,0,0,0.25)] border-2 border-slate-100 flex items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-[0_25px_60px_-10px_rgba(59,130,246,0.3)]">
@@ -74,16 +73,14 @@ export default function GoogleReviews() {
                 src="https://cdn.henoticdiagnostics.com/Front%20Office/henotic-diagnostics-name-plate.webp" 
                 alt="Google Business Profile" 
                 className="w-24 h-24 md:w-32 md:h-32 rounded-2xl object-cover"
-                loading="lazy"
-              />
+                loading="lazy" />
               <Image 
                 width={48} 
                 height={48}
                 src="https://cdn.henoticdiagnostics.com/ICONS-SYMBOLS/Google.webp" 
                 alt="Google Icon" 
                 className="absolute -top-4 -left-4 w-11 h-11 bg-white rounded-full p-1.5 shadow-lg border-2 border-white object-contain drop-shadow-md"
-                loading="lazy"
-              />
+                loading="lazy" />
             </div>
           </div>
 

@@ -1,21 +1,21 @@
 /**
  * 🏥 Intelligent Medical Blog Image Resolver
- * Resolves high-resolution diagnostic images for Payload CMS blog posts.
+ * Resolves high-resolution diagnostic images for WordPress blog posts.
  * Cascades:
- * 1. Post Featured Image (if set in Payload CMS)
+ * 1. Post Featured Image (if set in WordPress)
  * 2. Inline Image in Post Content (if present in HTML body)
  * 3. Keyword / Category Medical Image Matching
  * 4. Henotic Corporate Center Default Image
  */
 
 const FALLBACK_IMAGES = {
-  cardiac: "https://cdn.henoticdiagnostics.co.in/2026/01/7f8eb649-tmt-test-stress-echo-test-stress-test-2d-echo-test-kharghar-henotic-diagnostics-navi-mumbai.webp",
-  petCt: "https://cdn.henoticdiagnostics.co.in/Trust%20Signal/henotic-diagnostics-pet-scan_hero.webp",
-  mri: "https://cdn.henoticdiagnostics.co.in/Trust%20Signal/mri-scan-henotic-diagnostics_hero.webp",
-  ctScan: "https://cdn.henoticdiagnostics.co.in/Miscellaneous%20Section%20Images/934e91ce-ct-scan-kharghar-01-scaled.webp",
-  pathology: "https://cdn.henoticdiagnostics.co.in/Laboratory/laboratory-henotic-diagnostics-ct-scan-dexa-bone-scan-mri-scan-sonography-ultrasound-pet-scan-dopa-scan-kharghar-navi-mumbai.webp",
-  ultrasound: "https://cdn.henoticdiagnostics.co.in/Trust%20Signal/reception-desk-henotic-diagnostics_hero.webp",
-  default: "https://cdn.henoticdiagnostics.co.in/Trust%20Signal/henotic-diagnostics-main-entrance_hero.webp",
+  cardiac: "https://cdn.henoticdiagnostics.com/2026/01/7f8eb649-tmt-test-stress-echo-test-stress-test-2d-echo-test-kharghar-henotic-diagnostics-navi-mumbai.webp",
+  petCt: "https://cdn.henoticdiagnostics.com/Trust%20Signal/henotic-diagnostics-pet-scan_hero.webp",
+  mri: "https://cdn.henoticdiagnostics.com/Trust%20Signal/mri-scan-henotic-diagnostics_hero.webp",
+  ctScan: "https://cdn.henoticdiagnostics.com/Miscellaneous%20Section%20Images/934e91ce-ct-scan-kharghar-01-scaled.webp",
+  pathology: "https://cdn.henoticdiagnostics.com/Laboratory/laboratory-henotic-diagnostics-ct-scan-dexa-bone-scan-mri-scan-sonography-ultrasound-pet-scan-dopa-scan-kharghar-navi-mumbai.webp",
+  ultrasound: "https://cdn.henoticdiagnostics.com/Trust%20Signal/reception-desk-henotic-diagnostics_hero.webp",
+  default: "https://cdn.henoticdiagnostics.com/Trust%20Signal/henotic-diagnostics-main-entrance_hero.webp",
 };
 
 /** Extracts the first image URL from HTML content. */

@@ -139,7 +139,7 @@ export default function HomeSearchBar() {
             }}
             className="flex items-center gap-3 px-4 py-3 rounded-xl lg:rounded-full hover:bg-slate-100/80 transition-colors cursor-pointer border border-slate-100 lg:border-none"
           >
-            <div className="w-9 h-9 rounded-full bg-pink-50 text-pink-600 flex items-center justify-center shrink-0 shadow-sm">
+            <div className="w-9 h-9 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center shrink-0 shadow-sm">
               <MapPin size={18} />
             </div>
             <div className="flex flex-col text-left overflow-hidden flex-grow">
@@ -160,7 +160,7 @@ export default function HomeSearchBar() {
                   placeholder="Search city or area..."
                   value={locationQuery}
                   onChange={(e) => setLocationQuery(e.target.value)}
-                  className="w-full px-3 py-2 text-xs font-semibold bg-slate-50 border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500"
+                  className="w-full px-3 py-2 text-xs font-semibold bg-slate-50 border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
                   autoFocus
                 />
               </div>
@@ -183,7 +183,7 @@ export default function HomeSearchBar() {
                           setIsLocationOpen(false);
                         }}
                         className={`text-xs font-bold px-2.5 py-1 rounded-lg transition-colors ${
-                          selectedLocation.city === pop.city ? "bg-pink-600 text-white" : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                          selectedLocation.city === pop.city ? "bg-teal-600 text-white" : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                         }`}
                       >
                         {formatSlug(pop.city)}
@@ -207,7 +207,7 @@ export default function HomeSearchBar() {
                       setLocationQuery("");
                     }}
                     className={`w-full text-left px-3 py-2 rounded-xl text-xs font-semibold flex items-center justify-between transition-colors ${
-                      selectedLocation.city === loc.city ? "bg-pink-50 text-pink-700 font-bold" : "hover:bg-slate-50 text-slate-700"
+                      selectedLocation.city === loc.city ? "bg-teal-50 text-teal-700 font-bold" : "hover:bg-slate-50 text-slate-700"
                     }`}
                   >
                     <span>{loc.displayName}</span>
@@ -230,7 +230,7 @@ export default function HomeSearchBar() {
             <Search className="absolute left-4 text-slate-500 pointer-events-none" size={20} />
             <input
               type="text"
-              placeholder="Search doctors, clinics, MRI, CT, Blood Test, Anomaly Scan..."
+              placeholder="Search tests, packages, or locations..."
               value={searchQuery}
               onFocus={() => {
                 setIsSearchOpen(true);
@@ -291,11 +291,12 @@ export default function HomeSearchBar() {
         </div>
 
         {/* ========================================================= */}
-        {/* 🔎 GRADIENT SUBMIT BUTTON                                  */}
+        {/* 🔎 TEAL GRADIENT SUBMIT BUTTON                            */}
         {/* ========================================================= */}
         <button
           type="submit"
-          className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 text-white font-extrabold px-7 py-3.5 rounded-xl lg:rounded-full flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg shrink-0 cursor-pointer"
+          aria-label="Search diagnostic tests and scans"
+          className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-extrabold px-7 py-3.5 rounded-xl lg:rounded-full flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg shrink-0 cursor-pointer"
         >
           <Search size={18} strokeWidth={2.5} />
           <span className="lg:hidden text-sm">Search Scans</span>
